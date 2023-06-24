@@ -49,4 +49,14 @@ border: none;
 /*GLOBAL STYLES*/
 body {
  font-family: helvetica, arial, sans;
+
+}
+
+/*HEADER STYLES*/
+.header-nav {
+  float: right;
+}
+
+.header-nav > li {
+  display:inline-block
 }
