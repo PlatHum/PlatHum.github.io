@@ -7,5 +7,5 @@ source 'https://rubygems.org'
 gem 'github-pages', "~> 228", group: :jekyll_plugins
 
 #Weird Ruby behavior. This is needed to run jekyll serve
-gem "webrick"
-gem "faraday-retry"
+#gem "webrick"
+#gem "faraday-retry"
