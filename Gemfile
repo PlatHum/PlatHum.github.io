@@ -8,7 +8,7 @@ gem 'github-pages', group: :jekyll_plugins
 
 #Weird Ruby behavior. This is needed to run jekyll serve
 gem "webrick"
-
+gem "faraday-retry"
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
