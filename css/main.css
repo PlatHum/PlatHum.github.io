@@ -51,7 +51,6 @@ body {
  font-family: helvetica, arial, sans;
  background-color: wheat;
  overflow-x: hidden;
-
 }
 
 html {
@@ -67,7 +66,7 @@ html {
   justify-content: space-between;
 }
 
-@media (min-height: 300px) {
+@media (min-height: 300px){
   nav ul {
     position: sticky;
     top: 0;
@@ -85,10 +84,11 @@ html {
   background: hsl(0, 0%, 0%, 0.5);
 }
 
-@supports (backdrop-filter: blur(1rem)){
+@supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)){
   .header-nav{
     background: hsl(0, 0%, 100%, 0.1);
     backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
   }
 }
 
@@ -141,6 +141,7 @@ html {
     padding-block: 2rem;
     padding-inline: clamp(3rem, 10vw, 10rem);
   }
+
 }
 
 .header-nav  a{
@@ -152,7 +153,29 @@ html {
   margin-inline-end: 0.75em;
 }
 
+.home-div{
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+}
 
+@media (min-width: 55em){
+
+  .home-div{
+    grid-template-columns: 1fr repeat(3,2fr) 1fr;
+    gap: 3rem;
+  }
+  .home-bot{
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .home-text{
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
 
 /*UTILITY STYLES*/
 .flex{
@@ -161,7 +184,7 @@ html {
 }
 
 .sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+  /* clip: rect(0 0 0 0); */ 
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
@@ -181,4 +204,8 @@ html {
 
 .high-l2{
   color: #4FDA55;
+}
+
+.grid-col-span-2{
+  grid-column: span 2;
 }
