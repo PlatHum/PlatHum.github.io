@@ -113,7 +113,7 @@ html {
     position: absolute;
     z-index: 1000;
     background-color: transparent;
-    background-image: url(/assets/134216_menu_lines_hamburger_icon.png);
+    background-image: url(../assets/134216_menu_lines_hamburger_icon.png);
     background-repeat: repeat;
     aspect-ratio: 1;
     width: 3rem;
@@ -123,7 +123,7 @@ html {
   }
 
   .mobile-nav-toggle[aria-expanded="true"]{
-    background-image: url(/assets/211651_close_round_icon.png);
+    background-image: url(../assets/211651_close_round_icon.png);
 
   }
 
