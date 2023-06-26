@@ -4,7 +4,7 @@
 <head>
   <title> PlatHum's Portfolio</title>
   <link rel="stylesheet" href="css/main.css">
-  <script src="/scripts/header_nav.js" defer></script>   
+  <script src="{{ base.url | prepend: site.url }}/scripts/header_nav.js" defer></script>  
   <meta charset="utf-8">
 </head>
   
@@ -14,6 +14,7 @@
 
   {% include home.html %}
 
-    <script src="/scripts/no_animation.js" defer></script>
+  <script src="{{ base.url | prepend: site.url }}/scripts/no_animation.js" defer></script>
+
 </body>
 </html>
