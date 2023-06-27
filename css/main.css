@@ -182,7 +182,12 @@ nav ul>li:hover{
 .home-socials-text{
   margin-left: 1rem;
   margin-right: 1rem;
+  font-size: max(1.2vmax,1em,1rem);
 }
+
+.home-socials-text:hover{
+    font-weight: 700;
+  }
 
 /*TO REMOVE*/
 .home-bot{
@@ -213,7 +218,7 @@ nav ul>li:hover{
   font-weight: 500;
   padding-left: 25vw;
   padding-right: 22vw;
-  font-size: max(1.5vw, 1em, 1rem);;
+  font-size: max(1.5vmax, 1em, 1rem);
   text-align: justify;
   line-height: 1.5;
 }
