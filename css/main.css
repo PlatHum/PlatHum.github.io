@@ -93,7 +93,7 @@ html {
   }
 }
 
-@media (max-width: 35em){
+@media (max-width: 65em){
   .header-nav{
     --gap:4em;
     position: fixed;
@@ -130,13 +130,13 @@ html {
 
 }
 
-@media (min-width: 35em) and (max-width: 55em){
+@media (min-width: 65em) and (max-width: 80em){
   .header-nav a > span[aria-hidden]{
     display:none;
   }
 }
 
-@media (min-width: 35em){
+@media (min-width: 65em){
   .header-nav{
     --gap: clamp(1.5rem, 5vw, 3rem);
     padding-block: 2rem;
@@ -160,15 +160,19 @@ html {
     gap: 2rem;
     align-items: center;
     justify-items: center;
+    font-weight: 500;
+    margin-top: 2em;
 }
 
 .home-socials{
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
-.home-socials > a{
-  margin-left: 1em;
-  margin-right: 1em;
+.home-socials-text{
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /*TO REMOVE*/
@@ -178,16 +182,32 @@ html {
 }
 /*  */
 
-.home-div{
-  font-weight: 500;
-}
-
 .home-top-text{
   font-weight: 700;
 }
 
+.home-text-greeting{
+  font-weight: 800;
+  font-size: max(4vw, 2em, 2rem);
+  margin-bottom: 0.5em;
+}
 
-@media (min-width: 55em){
+.home-text-motto{
+  font-size: max(2.5vw, 1.25em, 1.25rem);;
+  padding-left: 6.5vw;
+  margin-bottom: 0.8em;
+}
+
+.home-bottom-text{
+  font-weight: 500;
+  padding-left: 3.25vw;
+  padding-right: 3vw;
+  font-size: max(1.5vw, 1em, 1rem);;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+@media (min-width: 80em){
 
   .home-div{
     grid-template-columns: 1fr repeat(3,2fr) 1fr;
@@ -218,6 +238,7 @@ html {
   background-repeat: no-repeat;
   background-origin: border-box;
   padding: 1.5rem;
+  
 }
 .linkedin-svg{
   background-image: url(../assets/svg/linkedin-svgrepo-com.svg);
@@ -258,8 +279,4 @@ html {
 
 .grid-col-span-2{
   grid-column: span 2;
-}
-
-.max-weight-text{
-  font-weight: 800;
 }
