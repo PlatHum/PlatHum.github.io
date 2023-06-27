@@ -196,21 +196,23 @@ nav ul>li:hover{
 }
 
 .home-text-greeting{
+  
   font-weight: 800;
-  font-size: max(4vw, 2em, 2rem);
+  font-size: max(4vmax, 2em, 2rem);
   margin-bottom: 0.5em;
+  padding-left: 12vw;
 }
 
 .home-text-motto{
   font-size: max(2.5vw, 1.25em, 1.25rem);
-  padding-left: 6.5vw;
+  padding-left: 15vw;
   margin-bottom: 0.8em;
 }
 
 .home-bottom-text{
   font-weight: 500;
-  padding-left: 3.25vw;
-  padding-right: 3vw;
+  padding-left: 25vw;
+  padding-right: 22vw;
   font-size: max(1.5vw, 1em, 1rem);;
   text-align: justify;
   line-height: 1.5;
@@ -230,12 +232,28 @@ nav ul>li:hover{
   }
   .home-text{
     grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-end: 6;
   }
+
   .home-socials{
     grid-column: 3 /5;
     grid-row-start: 2;
     padding: 0rem;
+    padding-left: 6vw;
+  }
+
+  .home-bottom-text{
+    padding-left: 6vw;
+    padding-right: 13.75vw;
+  }
+
+  .home-text-motto{
+    padding-left: 2.5vw;
+  }
+
+  .home-text-greeting{
+    padding-right: 0;
+    padding-left: 6vw;
   }
 }
 
