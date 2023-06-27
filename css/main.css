@@ -124,17 +124,16 @@ nav ul>li:hover{
     position: absolute;
     z-index: 1000;
     background-color: transparent;
-    background-image: url(../assets/png/134216_menu_lines_hamburger_icon.png);
-    background-repeat: repeat;
-    aspect-ratio: 1;
-    width: 3rem;
+    background-image: url(../assets/svg/menu-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     border: 0;
-    top: 2rem;
-    right:  2rem;;
+    padding: 1.5em;
+    right:  2rem;
   }
 
   .mobile-nav-toggle[aria-expanded="true"]{
-    background-image: url(../assets/png/211651_close_round_icon.png);
+    background-image: url(../assets/svg/close-x-svgrepo-com.svg);
 
   }
 
