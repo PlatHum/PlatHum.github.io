@@ -71,17 +71,12 @@ a:link, a:visited {
   justify-content: space-between;
   font-weight: 500;
   font-size: max(1.2vw, 1em, 1rem);
+  position: sticky;
+  top: 0;
 }
 
 nav ul>li:hover{
   font-weight: 700;
-}
-
-@media (min-height: 300px){
-  nav ul {
-    position: sticky;
-    top: 0;
-  }
 }
 
 .mobile-nav-toggle{
