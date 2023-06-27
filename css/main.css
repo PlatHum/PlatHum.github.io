@@ -48,8 +48,9 @@ border: none;
 
 /*GLOBAL STYLES*/
 body {
- font-family: helvetica, arial, sans;
- background-color: wheat;
+ font-family: 'JetbrainsMono',monospace, helvetica, arial, sans;
+ background-color: #174ea6;
+ color:snow;
  overflow-x: hidden;
 }
 
@@ -177,6 +178,15 @@ html {
 }
 /*  */
 
+.home-div{
+  font-weight: 500;
+}
+
+.home-top-text{
+  font-weight: 700;
+}
+
+
 @media (min-width: 55em){
 
   .home-div{
@@ -248,4 +258,8 @@ html {
 
 .grid-col-span-2{
   grid-column: span 2;
+}
+
+.max-weight-text{
+  font-weight: 800;
 }
