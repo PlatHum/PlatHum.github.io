@@ -275,6 +275,68 @@ nav ul>li:hover{
   background-origin: border-box;
   padding: 1.5rem;
 }
+/* SKILLS SECTION */
+.skills-programming-text{
+  grid-area: one;
+}
+.skills-programming-icons{
+  grid-area: two;
+  justify-self: center;
+}
+.skills-simulation-text{
+  grid-area: three;
+}
+.skills-simulation-icons{
+  grid-area: four;
+  justify-self: center;
+}
+.skills-modeling-text{
+  grid-area: five;
+}
+.skills-modeling-icons{
+  grid-area: six;
+  justify-self: center;
+}
+.skills-other-text{
+  grid-area: seven;
+}
+.skills-other-icons{
+  grid-area: eight;
+  justify-self: center;
+}
+.skills-planet{
+  grid-area: nine;
+  justify-self: center;
+  
+}
+.skills-div{
+  display: grid;
+  margin-top: 15vw;
+  gap: 2rem;
+  grid-template-areas: 
+  'one nine'
+  'two nine'
+  'three nine'
+  'four nine'
+  'five nine'
+  'six nine'
+  'seven nine'
+  'eight nine';
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-items: left;
+  font-weight: 500;
+  margin-left: 10vmax;
+  margin-right: 10vmax;
+}
+
+.skills-planet{
+  padding: 10vw;
+
+  border: 1px solid green;
+}
+
 /*UTILITY STYLES*/
 .flex{
   display: flex;
