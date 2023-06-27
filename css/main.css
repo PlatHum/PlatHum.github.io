@@ -156,10 +156,26 @@ html {
 .home-div{
     display: grid;
     grid-auto-columns: 1fr;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     justify-items: center;
 }
+
+.home-socials{
+  padding: 1rem;
+}
+
+.home-socials > a{
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/*TO REMOVE*/
+.home-bot{
+  padding: 5rem;
+  border: 2px solid green;
+}
+/*  */
 
 @media (min-width: 55em){
 
@@ -170,13 +186,37 @@ html {
   .home-bot{
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-row: span 2;
+    padding: 10rem;
   }
   .home-text{
     grid-column-start: 3;
     grid-column-end: 5;
   }
+  .home-socials{
+    grid-column: 3 /5;
+    grid-row-start: 2;
+    padding: 0rem;
+  }
 }
 
+/*SOCIAL SVGs*/
+.github-svg{
+  background-image: url(../assets/svg/github-142-svgrepo-com.svg);
+  background-position: center; 
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  padding: 1.5rem;
+}
+.linkedin-svg{
+  background-image: url(../assets/svg/linkedin-svgrepo-com.svg);
+  background-position: center; 
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  padding: 1.5rem;
+}
 /*UTILITY STYLES*/
 .flex{
   display: flex;
