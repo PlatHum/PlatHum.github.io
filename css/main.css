@@ -96,7 +96,8 @@ body {
   overflow-x: hidden; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 250px); }
 
 a:link, a:visited {
   color: snow; }
@@ -190,7 +191,8 @@ nav ul > li:hover {
   align-items: center;
   justify-items: center;
   font-weight: 500;
-  margin-top: 10vw; }
+  margin-top: 12vw;
+  margin-bottom: 15vw; }
 
 .home-socials {
   display: grid;
@@ -284,6 +286,11 @@ nav ul > li:hover {
 /*END HOME SECTION STYLES*/
 /* Skills section style */
 /*START SKILLS SECTION STYLES*/
+.skills-div {
+  margin-bottom: 15vw;
+  padding-bottom: 15vw;
+  /* to remove */ }
+
 .skills-programming-text {
   grid-area: one; }
 

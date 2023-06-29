@@ -1,5 +1,6 @@
 const headerNav = document.querySelector('.header-nav');
 const navToggle = document.querySelector('.mobile-nav-toggle');
+const navBarHeight = document.querySelector('.header').offsetHeight;
 
 navToggle.addEventListener('click', () => {
     const visibility = headerNav.getAttribute('data-visible');
@@ -12,3 +13,4 @@ navToggle.addEventListener('click', () => {
         navToggle.setAttribute('aria-expanded',"false");
     }
 })
+    document.documentElement.style.setProperty('--scroll-padding',navBarHeight -1 +"px")
