@@ -13,10 +13,10 @@
   @mixin for-big-desktop-up {
     @media (min-width: 1800px) { @content; }
   }
-  @mixin for-tablet-portrait-down{
+  @mixin for-tablet-portrait-down {
     @media (max-width: 899px) { @content; }
   }
-  @mixin for-tablet-landscape-only{
-    @media ((min-width:900) and (max-width: 1199px)) { @content; }
+  @mixin for-tablet-landscape-only {
+    @media (min-width:900px) and (max-width:1199px) { @content; }
   }
 
