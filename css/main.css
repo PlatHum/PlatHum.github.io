@@ -47,6 +47,35 @@ a img {
   border: none; }
 
 /* END RESET*/
+/* Utility css classes */
+/* START UTILITY STYLES*/
+.flex {
+  display: flex;
+  gap: var(--gap, 3rem); }
+
+.sr-only:not(:focus):not(:active) {
+  /* clip: rect(0 0 0 0); */
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important; }
+
+.high-l1 {
+  color: #8B5DF5; }
+
+.high-l2 {
+  color: #4FDA55; }
+
+.grid-col-span-2 {
+  grid-column: span 2; }
+
+/* END UTILITY STYLES*/
 /* Global style*/
 /* START GLOBAL STYLES*/
 body {
@@ -92,14 +121,14 @@ nav ul > li:hover {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem); } }
-@media (max-width: 65em) {
+@media (max-width: 899px) {
   .header-nav {
     --gap:4em;
     position: fixed;
     z-index: 90;
-    inset: 0 0 0 60%;
+    inset: 0 0 0 55%;
     flex-direction: column;
-    padding: min(30vh, 10rem) 2em;
+    padding: min(30vh, 10rem) min(2em, 1vw);
     transform: translateX(100%);
     transition: transform 350ms ease-out; }
 
@@ -120,14 +149,14 @@ nav ul > li:hover {
 
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url(../assets/svg/close-x-svgrepo-com.svg); } }
-@media (min-width: 65em) and (max-width: 80em) {
+@media (min-width: 900px) and (max-width: 1199px) {
   .header-nav a > span[aria-hidden] {
     display: none; } }
-@media (min-width: 65em) {
+@media (min-width: 900px) {
   .header-nav {
     --gap: clamp(1.5rem, 5vw, 3rem);
     padding-block: 2rem;
-    padding-inline: clamp(3rem, 10vw, 10rem); } }
+    padding-inline: clamp(3rem, 1vmax, 7rem); } }
 .header-nav a {
   text-decoration: none; }
 
@@ -289,34 +318,3 @@ nav ul > li:hover {
   border: 1px solid green; }
 
 /*END SKILLS SECTION STYLES*/
-/* Utility css classes */
-/* START UTILITY STYLES*/
-.flex {
-  display: flex;
-  gap: var(--gap, 3rem); }
-
-.sr-only:not(:focus):not(:active) {
-  /* clip: rect(0 0 0 0); */
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px; }
-
-.resize-animation-stopper * {
-  animation: none !important;
-  transition: none !important; }
-
-.high-l1 {
-  color: #8B5DF5; }
-
-.high-l2 {
-  color: #4FDA55; }
-
-.grid-col-span-2 {
-  grid-column: span 2; }
-
-/* END UTILITY STYLES*/
-
-/*# sourceMappingURL=main.css.map */

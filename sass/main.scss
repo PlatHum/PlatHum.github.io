@@ -1,6 +1,12 @@
+@import 'mixins';
+
 /* Reset browser styles */
 
 @import 'initial_reset';
+
+/* Utility css classes */
+
+@import 'utility';
 
 
 /* Global style*/
@@ -22,7 +28,3 @@
 
 @import 'skills';
 
-
-/* Utility css classes */
-
-@import 'utility';

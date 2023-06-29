@@ -1,7 +1,9 @@
 /*START HEADER STYLES*/
+
 .header-logo{
     margin: 2rem;
   }
+
   .header{
     align-items: center;
     justify-content: space-between;
@@ -33,15 +35,16 @@
       -webkit-backdrop-filter: blur(1rem);
     }
   }
-  
-  @media (max-width: 65em){
+
+  @include for-tablet-portrait-down {
+
     .header-nav{
       --gap:4em;
       position: fixed;
       z-index: 90;
-      inset: 0 0 0 60%;
+      inset: 0 0 0 55%;
       flex-direction: column;
-      padding: min(30vh, 10rem) 2em;
+      padding: min(30vh, 10rem) min(2em,1vw);
       transform: translateX(100%);
       transition: transform 350ms ease-out;
     }
@@ -65,26 +68,23 @@
   
     .mobile-nav-toggle[aria-expanded="true"]{
       background-image: url(../assets/svg/close-x-svgrepo-com.svg);
-  
     }
-  
   }
-  
-  @media (min-width: 65em) and (max-width: 80em){
+
+  @include for-tablet-landscape-only {
     .header-nav a > span[aria-hidden]{
       display:none;
     }
   }
   
-  @media (min-width: 65em){
+  @include for-tablet-landscape-up{
     .header-nav{
       --gap: clamp(1.5rem, 5vw, 3rem);
       padding-block: 2rem;
-      padding-inline: clamp(3rem, 10vw, 10rem);
+      padding-inline: clamp(3rem, 1vmax, 7rem);
     }
-  
   }
-  
+
   .header-nav  a{
     text-decoration: none;
   }
