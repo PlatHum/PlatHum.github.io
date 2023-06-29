@@ -49,6 +49,17 @@ a img {
 /* END RESET*/
 /* Utility css classes */
 /* START UTILITY STYLES*/
+/* @link https://utopia.fyi/type/calculator?c=300,11,1.2,1800,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  --step--2: clamp(0.48rem, calc(0.45rem + 0.17vw), 0.63rem);
+  --step--1: clamp(0.57rem, calc(0.52rem + 0.29vw), 0.84rem);
+  --step-0: clamp(0.69rem, calc(0.60rem + 0.47vw), 1.13rem);
+  --step-1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.50rem);
+  --step-2: clamp(0.99rem, calc(0.79rem + 1.08vw), 2.00rem);
+  --step-3: clamp(1.19rem, calc(0.89rem + 1.57vw), 2.66rem);
+  --step-4: clamp(1.43rem, calc(1.00rem + 2.27vw), 3.55rem);
+  --step-5: clamp(1.71rem, calc(1.11rem + 3.23vw), 4.74rem); }
+
 .flex {
   display: flex;
   gap: var(--gap, 3rem); }
@@ -100,9 +111,10 @@ a:link, a:visited {
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
-  font-size: max(1.2vw, 1em, 1rem);
   position: sticky;
-  top: 0; }
+  top: 0;
+  /* view in _utility.scss */
+  font-size: var(--step-1); }
 
 nav ul > li:hover {
   font-weight: 700; }
@@ -130,7 +142,8 @@ nav ul > li:hover {
     flex-direction: column;
     padding: min(30vh, 10rem) min(2em, 1vw);
     transform: translateX(100%);
-    transition: transform 350ms ease-out; }
+    transition: transform 350ms ease-out;
+    font-size: var(--step-2); }
 
   .header-nav[data-visible="true"] {
     transform: translateX(0%); }
@@ -151,7 +164,10 @@ nav ul > li:hover {
     background-image: url(../assets/svg/close-x-svgrepo-com.svg); } }
 @media (min-width: 900px) and (max-width: 1199px) {
   .header-nav a > span[aria-hidden] {
-    display: none; } }
+    display: none; }
+
+  .header-nav {
+    font-size: var(--step-2); } }
 @media (min-width: 900px) {
   .header-nav {
     --gap: clamp(1.5rem, 5vw, 3rem);

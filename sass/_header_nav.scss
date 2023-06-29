@@ -8,9 +8,10 @@
     align-items: center;
     justify-content: space-between;
     font-weight: 500;
-    font-size: max(1.2vw, 1em, 1rem);
     position: sticky;
     top: 0;
+    /* view in _utility.scss */
+    font-size: var(--step-1);
   }
   
   nav ul>li:hover{
@@ -47,6 +48,7 @@
       padding: min(30vh, 10rem) min(2em,1vw);
       transform: translateX(100%);
       transition: transform 350ms ease-out;
+      font-size: var(--step-2);
     }
   
     .header-nav[data-visible="true"] {
@@ -74,6 +76,10 @@
   @include for-tablet-landscape-only {
     .header-nav a > span[aria-hidden]{
       display:none;
+    }
+
+    .header-nav{
+      font-size: var(--step-2);
     }
   }
   
