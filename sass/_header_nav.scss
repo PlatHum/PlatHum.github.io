@@ -1,0 +1,96 @@
+/*START HEADER STYLES*/
+.header-logo{
+    margin: 2rem;
+  }
+  .header{
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: max(1.2vw, 1em, 1rem);
+    position: sticky;
+    top: 0;
+  }
+  
+  nav ul>li:hover{
+    font-weight: 700;
+  }
+  
+  .mobile-nav-toggle{
+    display: none;
+  }
+  
+  .header-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0, 0%, 0% / 0.5);
+  }
+  
+  @supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)){
+    .header-nav{
+      background: hsla(0, 0%, 100%, 0.1);
+      backdrop-filter: blur(1rem);
+      -webkit-backdrop-filter: blur(1rem);
+    }
+  }
+  
+  @media (max-width: 65em){
+    .header-nav{
+      --gap:4em;
+      position: fixed;
+      z-index: 90;
+      inset: 0 0 0 60%;
+      flex-direction: column;
+      padding: min(30vh, 10rem) 2em;
+      transform: translateX(100%);
+      transition: transform 350ms ease-out;
+    }
+  
+    .header-nav[data-visible="true"] {
+      transform: translateX(0%);
+    }
+  
+    .mobile-nav-toggle{
+      display: block;
+      position: absolute;
+      z-index: 1000;
+      background-color: transparent;
+      background-image: url(../assets/svg/menu-svgrepo-com.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: 0;
+      padding: 1.5em;
+      right:  2rem;
+    }
+  
+    .mobile-nav-toggle[aria-expanded="true"]{
+      background-image: url(../assets/svg/close-x-svgrepo-com.svg);
+  
+    }
+  
+  }
+  
+  @media (min-width: 65em) and (max-width: 80em){
+    .header-nav a > span[aria-hidden]{
+      display:none;
+    }
+  }
+  
+  @media (min-width: 65em){
+    .header-nav{
+      --gap: clamp(1.5rem, 5vw, 3rem);
+      padding-block: 2rem;
+      padding-inline: clamp(3rem, 10vw, 10rem);
+    }
+  
+  }
+  
+  .header-nav  a{
+    text-decoration: none;
+  }
+  
+  .header-nav a > [aria-hidden="true"]{
+    font-weight: 700;
+    margin-inline-end: 0.75em;
+  }
+  /*END HEADER STYLES*/

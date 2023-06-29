@@ -1,0 +1,119 @@
+/*START HOME SECTION STYLES*/
+.home-div{
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    font-weight: 500;
+    margin-top: 10vw;
+}
+
+.home-socials{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.home-socials-text{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: max(1.2vmax,1em,1rem);
+}
+
+.home-socials-text:hover{
+    font-weight: 700;
+  }
+
+/*TO REMOVE*/
+.home-bot{
+  padding: 5rem;
+  border: 2px solid green;
+}
+/*  */
+
+.home-top-text{
+  font-weight: 700;
+}
+
+.home-text-greeting{
+  
+  font-weight: 800;
+  font-size: max(4vmax, 2em, 2rem);
+  margin-bottom: 0.5em;
+  padding-left: 12vw;
+}
+
+.home-text-motto{
+  font-size: max(2.5vw, 1.25em, 1.25rem);
+  padding-left: 15vw;
+  margin-bottom: 0.8em;
+}
+
+.home-bottom-text{
+  font-weight: 500;
+  padding-left: 25vw;
+  padding-right: 22vw;
+  font-size: max(1.5vmax, 1em, 1rem);
+  text-align: justify;
+  line-height: 1.5;
+}
+
+@media (min-width: 80em){
+
+  .home-div{
+    grid-template-columns: 1fr repeat(3,2fr) 1fr;
+    gap: 3rem;
+  }
+  .home-bot{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: span 2;
+    padding: 10rem;
+  }
+  .home-text{
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+
+  .home-socials{
+    grid-column: 3 /5;
+    grid-row-start: 2;
+    padding: 0rem;
+    padding-left: 6vw;
+  }
+
+  .home-bottom-text{
+    padding-left: 6vw;
+    padding-right: 13.75vw;
+  }
+
+  .home-text-motto{
+    padding-left: 2.5vw;
+  }
+
+  .home-text-greeting{
+    padding-right: 0;
+    padding-left: 6vw;
+  }
+}
+
+/*SOCIAL SVGs*/
+.github-svg{
+  background-image: url(../assets/svg/github-142-svgrepo-com.svg);
+  background-position: center; 
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  padding: 1.5rem;
+  
+}
+.linkedin-svg{
+  background-image: url(../assets/svg/linkedin-svgrepo-com.svg);
+  background-position: center; 
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  padding: 1.5rem;
+}
+/*END HOME SECTION STYLES*/

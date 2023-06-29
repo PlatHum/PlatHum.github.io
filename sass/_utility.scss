@@ -1,0 +1,33 @@
+/* START UTILITY STYLES*/
+.flex{
+    display: flex;
+    gap: var(--gap, 3rem);
+  }
+  
+  .sr-only:not(:focus):not(:active) {
+    /* clip: rect(0 0 0 0); */ 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+  
+  .resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .high-l1{
+    color: #8B5DF5;
+  }
+  
+  .high-l2{
+    color: #4FDA55;
+  }
+  
+  .grid-col-span-2{
+    grid-column: span 2;
+  }
+/* END UTILITY STYLES*/
