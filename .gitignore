@@ -1,6 +1,8 @@
 .sass-cache
+*.css.map
 .jekyll-cache
 .jekyll-metadata
 vendor
 _site/
 .bundle
+.vscode/
