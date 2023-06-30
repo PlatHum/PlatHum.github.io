@@ -179,8 +179,21 @@ nav ul > li:hover {
 
 .header-nav a > [aria-hidden="true"] {
   font-weight: 700;
-  margin-inline-end: 0.4em; }
+  margin-inline-end: min(0.2em, 0.3rem); }
 
+.header-nav a[active="true"] span.header-space {
+  background-color: snow;
+  animation: blinking 0.8s linear infinite;
+  animation-delay: 0s;
+  animation-play-state: running; }
+
+@keyframes blinking {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.7; }
+  100% {
+    opacity: 0; } }
 /*END HEADER STYLES*/
 /*Home section style*/
 /*START HOME SECTION STYLES*/
