@@ -20,3 +20,21 @@
     @media (min-width:900px) and (max-width:1199px) { @content; }
   }
 
+  @mixin reset-button-style{
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+  }
+
+  @mixin blurry-background{
+    background: hsl(0, 0%, 0% / 0.5);
+    @supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)){
+      background: hsla(0, 0%, 100%, 0.1);
+      backdrop-filter: blur(1rem);
+      -webkit-backdrop-filter: blur(1rem);
+    }
+  }
