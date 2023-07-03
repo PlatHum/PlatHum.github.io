@@ -46,6 +46,10 @@ em, i {
 a img {
   border: none; }
 
+/* a:hover, a:active, a:focus {
+    outline: none;
+    border: 0;
+} */
 /* END RESET*/
 /* Utility css classes */
 /* START UTILITY STYLES*/
@@ -99,6 +103,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding, 250px); }
 
+a,
 a:visited {
   color: snow; }
 
@@ -128,12 +133,12 @@ nav ul > li:hover {
   padding: 0;
   margin: 0;
   background: black; }
+  @supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)) {
+    .header-nav {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(1rem);
+      -webkit-backdrop-filter: blur(1rem); } }
 
-@supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)) {
-  .header-nav {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem); } }
 @media (max-width: 899px) {
   .header-nav {
     --gap:4em;
@@ -187,6 +192,9 @@ nav ul > li:hover {
   animation-delay: 0s;
   animation-play-state: running; }
 
+.header-nav .header-dropdown-option ul a[active="true"] span.header-space {
+  animation-delay: 0.4s; }
+
 @keyframes blinking {
   0% {
     opacity: 0; }
@@ -194,6 +202,32 @@ nav ul > li:hover {
     opacity: 0.7; }
   100% {
     opacity: 0; } }
+.header-dropdown-option ul {
+  list-style: none;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1vmax;
+  padding-inline: 1vmax;
+  font-weight: 500;
+  border-radius: 0.8vmax; }
+
+.header-dropdown-option:hover > ul,
+.header-dropdown-option:focus-within > ul,
+.header-dropdown-option:active > ul,
+.header-dropdown-option:target > ul {
+  display: flex; }
+
+@media (min-width: 900px) {
+  .header-dropdown-option ul {
+    font-size: --step-0;
+    background: black; }
+    @supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)) {
+      .header-dropdown-option ul {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem); } } }
 /*END HEADER STYLES*/
 /*Home section style*/
 /*START HOME SECTION STYLES*/

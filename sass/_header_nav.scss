@@ -26,15 +26,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background: hsl(0, 0%, 0% / 0.5);
-  }
-  
-  @supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)){
-    .header-nav{
-      background: hsla(0, 0%, 100%, 0.1);
-      backdrop-filter: blur(1rem);
-      -webkit-backdrop-filter: blur(1rem);
-    }
+    @include blurry-background;
   }
 
   @include for-tablet-portrait-down {
@@ -107,6 +99,11 @@
     animation-delay:0s;
     animation-play-state: running;
   }
+  .header-nav .header-dropdown-option ul a[active="true"] span.header-space{
+
+    animation-delay:0.4s;
+
+  }
 
   @keyframes blinking {
     0% {
@@ -121,5 +118,35 @@
         opacity: 0;
     }
   }
+
+.header-dropdown-option ul{
+    list-style: none;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1vmax;
+    padding-inline: 1vmax;
+    font-weight: 500;
+    border-radius: 0.8vmax;
+
+}
+.header-dropdown-option:hover > ul,
+.header-dropdown-option:focus-within > ul,
+.header-dropdown-option:active > ul,
+.header-dropdown-option:target > ul{
+  display:flex; 
+ }
+
+
+@include for-tablet-landscape-up{
+.header-dropdown-option ul{
+  font-size: --step-0;
+  @include blurry-background;
+}
+
+}
+
+
 
   /*END HEADER STYLES*/
