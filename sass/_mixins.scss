@@ -7,6 +7,9 @@
   @mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }
   }
+  @mixin for-tablet-landscape-down {
+    @media (max-width: 1199px) { @content; }
+  }
   @mixin for-desktop-up {
     @media (min-width: 1200px) { @content; }
   }
@@ -38,3 +41,17 @@
       -webkit-backdrop-filter: blur(1rem);
     }
   }
+  @mixin border-box{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  @mixin v-align{ 
+    top: 50%;  
+    transform: translateY(-50%);
+    -ms-transform:translateY(-50%); /* IE */
+    -moz-transform:translateY(-50%); /* Firefox */
+    -webkit-transform:translateY(-50%); /* Safari and Chrome */
+    -o-transform:translateY(-50%);
+}
