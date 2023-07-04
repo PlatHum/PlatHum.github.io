@@ -4,6 +4,13 @@ body {
     background-color: #174ea6;
     color:snow;
     overflow-x: hidden;
+    max-width: 1800px;
+   }
+
+   section{
+     height: min(100vh,2160px);
+     min-width: 300px;
+
    }
    
 html {
@@ -13,5 +20,9 @@ html {
  a,  
  a:visited {
      color:snow;
+     font-weight: 500;
+}
+a:hover{
+     font-weight: 700;
 }
    /* END GLOBAL STYLES*/
