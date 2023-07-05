@@ -1,10 +1,7 @@
 /*START SKILLS SECTION STYLES*/
-.skills-div{
-   margin-bottom: 15vw;
-   padding-bottom: 15vw; /* to remove */
-}
 .skills-programming-text{
     grid-area: one;
+    font-size: var(--step-2);
   }
   .skills-programming-icons{
     grid-area: two;
@@ -12,6 +9,7 @@
   }
   .skills-simulation-text{
     grid-area: three;
+    font-size: var(--step-2);
   }
   .skills-simulation-icons{
     grid-area: four;
@@ -19,6 +17,7 @@
   }
   .skills-modeling-text{
     grid-area: five;
+    font-size: var(--step-2);
   }
   .skills-modeling-icons{
     grid-area: six;
@@ -26,6 +25,7 @@
   }
   .skills-other-text{
     grid-area: seven;
+    font-size: var(--step-2);
   }
   .skills-other-icons{
     grid-area: eight;
@@ -37,8 +37,8 @@
     
   }
   .skills-div{
+    @include border-box;
     display: grid;
-    margin-top: 15vw;
     gap: 2rem;
     grid-template-areas: 
     'one nine'
@@ -54,13 +54,16 @@
     align-items: center;
     justify-items: left;
     font-weight: 500;
-    margin-left: 10vmax;
-    margin-right: 10vmax;
+    font-size: var(--step-0);
+    height: 50%;
+
   }
   
   .skills-planet{
-    padding: 12rem;
-  
-    border: 1px solid green;
+    height:0;
+    width:80%;
+    padding-bottom:80%;
+    background-color:rgba(0, 85, 255, 0.284);
+
   }
   /*END SKILLS SECTION STYLES*/
