@@ -43,7 +43,6 @@ const getOffsetTop = element => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = getOffsetTop(current)-100;
       let sectionId = current.getAttribute("id");
-      console.log(Yscroll,sectionHeight,sectionTop);
       
       /*
       - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
