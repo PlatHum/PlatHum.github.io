@@ -1,8 +1,8 @@
 /*START HEADER STYLES*/
 
 .header-logo{
-    box-sizing: border-box;
-    padding: 2rem;
+    
+    margin: 2rem;
   }
 
   .header{
@@ -80,7 +80,7 @@
     .header-nav{
       --gap: clamp(1.5rem, 5vw, 3rem);
       padding-block: 2rem;
-      padding-inline: clamp(3rem, 1vmax, 7rem);
+      padding-inline: clamp(3rem, 10vw, 7rem);
     }
   }
 
@@ -138,7 +138,5 @@
 }
 
 }
-
-
 
   /*END HEADER STYLES*/
