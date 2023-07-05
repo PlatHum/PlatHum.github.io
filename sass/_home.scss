@@ -95,7 +95,7 @@
   background-size: contain; 
   background-repeat: no-repeat;
   background-origin: border-box;
-  padding: min(1.3rem,4.5vw);
+  padding: 1.3rem;
   
 }
 .linkedin-svg{
@@ -105,5 +105,22 @@
   background-repeat: no-repeat;
   background-origin: border-box;
   padding: 1.5rem;
+}
+/* DOWN SVG */
+.down-svg{
+  background-image: url(../assets/svg/down-arrow-4-svgrepo-com.svg);
+  background-position: center; 
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  padding: 1rem;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  place-self: center;
+}
+.down-svg a{
+  text-decoration: none;
 }
 /*END HOME SECTION STYLES*/
