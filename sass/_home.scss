@@ -2,8 +2,8 @@
 .home-div{
   display:grid;
   grid-template-columns: 0.75fr 1fr 1fr 1fr;
-  grid-template-rows: 2.5fr 1fr;
-  height: 100%;
+  grid-template-rows: 2.5fr 0.1fr 1fr;
+/*   height: 100%; */
 
   @include border-box;
 
@@ -20,8 +20,8 @@
   text-align: center;
   justify-content: space-evenly;
   font-size: var(--step-2);
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
   grid-column-start: 3;
   grid-column-end: 5;
 }
@@ -35,7 +35,7 @@
   background-color:rgba(0, 85, 255, 0.284);
   z-index: -1;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 4;
   align-self: center;
@@ -45,7 +45,7 @@
 
 .home-text{
   @include border-box;
-  line-height: max(15vh,7rem);
+  line-height: 7rem;
   letter-spacing: -0.05em;
   grid-row-start: 1;
   grid-row-end: 2;
@@ -114,8 +114,8 @@
   background-repeat: no-repeat;
   background-origin: border-box;
   padding: 1rem;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 5;
   place-self: center;

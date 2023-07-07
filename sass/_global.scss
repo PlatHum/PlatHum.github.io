@@ -16,7 +16,7 @@ section{
 html {
      scroll-behavior: smooth;
      scroll-padding-top: var(--scroll-padding, 250px);
-     min-height: 500%;
+/*      min-height: 500%; */
      max-width: 1920px;
      display: flex;
      flex-direction: column;
@@ -32,7 +32,7 @@ a:hover{
 
 .content{
      display: grid;
-     grid-template-rows:1fr 1.4fr 1.4fr 1fr;
+     grid-template-rows:max-content max-content max-content 1fr;
      margin-left: clamp(7.5vw,1.35vw, 3.5vw);
      margin-right: clamp(7.5vw,-1.35vw, 3.5vw);
      flex: 1;
