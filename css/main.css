@@ -545,12 +545,22 @@ nav ul > li:hover {
 .timeline-card-icon .ist-logo {
   position: relative;
   z-index: 2;
-  background-image: url(../assets/svg/tecnico_logo.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
-  padding: 2.5rem; }
+  padding: 2.5rem;
+  background-image: url(../assets/svg/tecnico_logo.svg); }
+
+.timeline-card-icon .iefp-logo {
+  position: relative;
+  z-index: 2;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  padding: 2.5rem;
+  background-image: url(../assets/svg/iefp_logo.svg); }
 
 .timeline-card-content {
   position: absolute;

@@ -99,14 +99,14 @@
 
 .timeline-card-icon .ist-logo{
     
-    position: relative;
-    z-index: 2;
+    @include timeine-card-logo;
     background-image: url(../assets/svg/tecnico_logo.svg);
-    background-position: center; 
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-origin: border-box;
-    padding: 2.5rem;
+
+}
+.timeline-card-icon .iefp-logo{
+    
+    @include timeine-card-logo;
+    background-image: url(../assets/svg/iefp_logo.svg);
 
 }
 .timeline-card-content{

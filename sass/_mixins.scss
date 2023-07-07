@@ -55,3 +55,14 @@
     -webkit-transform:translateY(-50%); /* Safari and Chrome */
     -o-transform:translateY(-50%);
 }
+
+@mixin timeine-card-logo{
+    
+    position: relative;
+    z-index: 2;
+    background-position: center; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    padding: 2.5rem;
+}
