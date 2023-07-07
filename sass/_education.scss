@@ -13,9 +13,6 @@
     position: relative;
 /*     width: 320px; */
     height: 90%;
-    @include for-tablet-portrait-down{
-        height: 70%;
-    }
     aspect-ratio: 0.7111;
     background: #287bff;
     border-radius: 20px;
@@ -29,6 +26,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+@include for-tablet-portrait-down{
+    .timeline-card{
+        height: 70%;
+    }
 }
 
 .timeline-card::before {
@@ -176,10 +178,12 @@
     display: grid;
     grid-template-rows: 0.5fr 0.65fr min-content 0.75fr min-content;
     row-gap: 3%;
-    @include for-tablet-landscape-down{
-        row-gap: 1%;
-        grid-template-rows: 0.5fr 0.65fr min-content 0.75fr 0.5fr;
-    }
+}
+@include for-tablet-landscape-down{
+   .timeline-card-content{
+    row-gap: 1%;
+    grid-template-rows: 0.5fr 0.65fr min-content 0.75fr 0.5fr;
+   }
 }
 
 .education-time-interval{

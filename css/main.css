@@ -482,10 +482,10 @@ nav ul > li:hover {
   display: flex;
   justify-content: center;
   align-items: flex-start; }
-  @media (max-width: 899px) {
-    .timeline-card {
-      height: 70%; } }
 
+@media (max-width: 899px) {
+  .timeline-card {
+    height: 70%; } }
 .timeline-card::before {
   content: "";
   position: absolute;
@@ -613,11 +613,11 @@ nav ul > li:hover {
   display: grid;
   grid-template-rows: 0.5fr 0.65fr min-content 0.75fr min-content;
   row-gap: 3%; }
-  @media (max-width: 1199px) {
-    .timeline-card-content {
-      row-gap: 1%;
-      grid-template-rows: 0.5fr 0.65fr min-content 0.75fr 0.5fr; } }
 
+@media (max-width: 1199px) {
+  .timeline-card-content {
+    row-gap: 1%;
+    grid-template-rows: 0.5fr 0.65fr min-content 0.75fr 0.5fr; } }
 .education-time-interval {
   font-size: calc(var(--step--1) + 2px);
   font-weight: 500;
