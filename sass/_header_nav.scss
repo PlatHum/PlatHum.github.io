@@ -1,10 +1,5 @@
 /*START HEADER STYLES*/
 
-.header-logo{
-    
-    margin: 2rem;
-  }
-
   .header{
     align-items: center;
     justify-content: space-between;
@@ -137,6 +132,17 @@
   @include blurry-background;
 }
 
+}
+
+/*LOGO SVG*/
+.header-logo{
+  background-image: url(../assets/svg/Caybara-Logo.svg);
+  background-position: center; 
+  background-size:cover; 
+  background-repeat: no-repeat;
+  background-origin:border-box;
+  margin: 2rem;
+  text-decoration: none;
 }
 
   /*END HEADER STYLES*/
