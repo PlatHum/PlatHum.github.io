@@ -500,7 +500,7 @@ nav ul > li:hover {
 .timeline-card:hover::before {
   transform: translateY(-50%); }
 
-.timeline-card:hover {
+.timeline-card:hover, .timeline-card:active {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
