@@ -56,7 +56,7 @@
     -o-transform:translateY(-50%);
 }
 
-@mixin timeine-card-logo{
+@mixin timeline-card-logo($padding : 2.5rem , $smallpad : 2rem){
     
     position: relative;
     z-index: 2;
@@ -64,5 +64,8 @@
     background-size: contain; 
     background-repeat: no-repeat;
     background-origin: border-box;
-    padding: 2.5rem;
+    padding:$padding;
+    @include for-tablet-portrait-down(){
+      padding: $smallpad;
+    }
 }

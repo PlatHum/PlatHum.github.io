@@ -7,11 +7,12 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    min-width: 300px;
    }
 
-section{
+/* section{
      min-width: 300px;
-}
+} */
    
 html {
      scroll-behavior: smooth;
@@ -33,8 +34,8 @@ a:hover{
 .content{
      display: grid;
      grid-template-rows:max-content max-content max-content 1fr;
-     margin-left: clamp(7.5vw,1.35vw, 3.5vw);
-     margin-right: clamp(7.5vw,-1.35vw, 3.5vw);
+     margin-left: clamp(7.5vw,1.35vw, 1vw);
+     margin-right: clamp(7.5vw,1.35vw, 1vw);
      flex: 1;
      row-gap: 10vh;
 }

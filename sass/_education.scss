@@ -3,15 +3,19 @@
     justify-items: center;
     align-items: center;
     /* flex-wrap: wrap */;
-    grid-template-columns: minmax(75px,1fr) minmax(75px,1fr);
+/*     grid-template-columns: minmax(75px,1fr) minmax(75px,1fr); */
     grid-template-rows: minmax(100px,150px) minmax(100px,150px) minmax(100px,150px) minmax(100px,150px) minmax(100px,150px) minmax(100px,150px) minmax(100px,150px);
-
+/*     overflow-x: scroll; */
+    column-gap: 1vw;
 }
 
 .timeline-card {
     position: relative;
 /*     width: 320px; */
     height: 90%;
+    @include for-tablet-portrait-down{
+        height: 70%;
+    }
     aspect-ratio: 0.7111;
     background: #287bff;
     border-radius: 20px;
@@ -99,22 +103,15 @@
 
 .timeline-card-icon .ist-logo{
     
-    @include timeine-card-logo;
+    @include timeline-card-logo($padding:2.5rem);
     background-image: url(../assets/svg/tecnico_logo.svg);
 
 }
 .timeline-card-icon .iefp-logo{
     
-    @include timeine-card-logo;
+    @include timeline-card-logo;
     background-image: url(../assets/svg/iefp_logo.svg);
 
-}
-.timeline-card-content{
-    position: absolute;
-    width: 100%;
-    padding: 30px;
-    padding-top: 160px;
-    text-align: center;
 }
 
 .education-bachelor{
@@ -167,4 +164,47 @@
     0 7px 0 #fff,
     inset 0 -5px 0 rgba(255, 255, 255, 0.25),
     0 25px 25px #41e97689;
+}
+
+.timeline-card-content{
+    position: absolute;
+    aspect-ratio: 1.167;
+    width: 100%;
+    padding: 30px;
+    padding-top: 125px;
+
+    display: grid;
+    grid-template-rows: 0.5fr 0.65fr min-content 0.75fr min-content;
+    row-gap: 3%;
+    @include for-tablet-landscape-down{
+        row-gap: 1%;
+        grid-template-rows: 0.5fr 0.65fr min-content 0.75fr 0.5fr;
+    }
+}
+
+.education-time-interval{
+    font-size: calc(var(--step--1) + 2px);
+    font-weight: 500;
+    text-align: center;
+}
+
+.education-degree{
+    font-size: var(--step-0);
+    font-weight: 600;
+    text-align: center;
+}
+
+.education-course, .education-specialization{
+    font-size: var(--step-0);
+    font-weight: 500;
+    text-align: center;
+}
+.education-specialization{
+    font-weight: 600;
+}
+
+.education-institution{
+    font-size: var(--step-0);
+    font-weight: 700;
+    text-align: center;
 }
