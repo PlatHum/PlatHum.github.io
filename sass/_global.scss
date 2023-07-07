@@ -36,6 +36,7 @@ a:hover{
      margin-left: clamp(7.5vw,1.35vw, 3.5vw);
      margin-right: clamp(7.5vw,-1.35vw, 3.5vw);
      flex: 1;
+     row-gap: 10vh;
 }
 #Home{
      
@@ -44,6 +45,13 @@ a:hover{
 #About{
      
      grid-row: 2 / 3;
+     display: grid;
+     grid-template-rows: max-content max-content;
+     row-gap: 10vh;
+}
+
+#Skills{
+     place-self: center;
 }
 #Experience{
      
