@@ -13,7 +13,8 @@
     position: relative;
 /*     width: 320px; */
     height: 100%;
-    width: 50%;
+    width: 40%;
+    min-width: 320px;
 /*     aspect-ratio: 0.7111; */
     background: #287bff;
     border-radius: 20px;
@@ -116,14 +117,19 @@
 
 @include for-tablet-landscape-down{
     .timeline-card{
-        width:65%;
+        width:55%;
         height: 75%;
+        min-width: 250px;
     }
 }
 @include for-phone-only{
+    .education-container{
+        grid-template-columns: 1fr 0.9fr 1fr;
+    }
     .timeline-card{
-        width:100%;
+        width:75%;
         height: 60%;
+        min-width: 190px;
     }
 .timeline-card-icon{
         border-bottom-left-radius: 30%;
@@ -193,7 +199,7 @@
     display: grid;
     grid-template-rows: 0.5fr 0.65fr min-content 0.75fr min-content;
     
-    row-gap: 3%;
+    row-gap: clamp(3%, 2vmin,10%);
 }
 @include for-tablet-landscape-down{
    .timeline-card-content{
