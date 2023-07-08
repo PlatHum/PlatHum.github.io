@@ -471,7 +471,8 @@ nav ul > li:hover {
   position: relative;
   /*     width: 320px; */
   height: 100%;
-  aspect-ratio: 0.7111;
+  width: 50%;
+  /*     aspect-ratio: 0.7111; */
   background: #287bff;
   border-radius: 20px;
   border-bottom-left-radius: 160px;
@@ -481,11 +482,9 @@ nav ul > li:hover {
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-start; }
+  align-items: flex-start;
+  flex-direction: row; }
 
-@media (max-width: 899px) {
-  .timeline-card {
-    height: 70%; } }
 .timeline-card::before {
   content: "";
   position: absolute;
@@ -497,10 +496,10 @@ nav ul > li:hover {
   transition: transform 3s;
   z-index: -2; }
 
-.timeline-card:hover::before {
+.timeline-card:hover::before, .timeline-card:active::before, .timeline-card:focus::before, .timeline-card:focus-within::before {
   transform: translateY(-50%); }
 
-.timeline-card:hover, .timeline-card:active {
+.timeline-card:hover, .timeline-card:active, .timeline-card:focus, .timeline-card:focus-within {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -516,11 +515,12 @@ nav ul > li:hover {
 .timeline-card-icon {
   /*     width: 140px; */
   height: 26.667%;
-  aspect-ratio: 1.167;
+  width: 45%;
+  /*     aspect-ratio: 1.167; */
   background: #174ea6;
   position: relative;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
   box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 #fff;
   z-index: 1;
   display: flex;
@@ -555,11 +555,14 @@ nav ul > li:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
-  padding: 2.5rem;
+  padding: 3rem;
   background-image: url(../assets/svg/tecnico_logo.svg); }
-  @media (max-width: 899px) {
+  @media (max-width: 1199px) {
     .timeline-card-icon .ist-logo {
-      padding: 2rem; } }
+      padding: 2.4rem; } }
+  @media (max-width: 599px) {
+    .timeline-card-icon .ist-logo {
+      padding: 1.2rem; } }
 
 .timeline-card-icon .iefp-logo {
   position: relative;
@@ -568,12 +571,24 @@ nav ul > li:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
-  padding: 2.5rem;
+  padding: 3rem;
   background-image: url(../assets/svg/iefp_logo.svg); }
-  @media (max-width: 899px) {
+  @media (max-width: 1199px) {
     .timeline-card-icon .iefp-logo {
-      padding: 2rem; } }
+      padding: 2.4rem; } }
+  @media (max-width: 599px) {
+    .timeline-card-icon .iefp-logo {
+      padding: 1.2rem; } }
 
+@media (max-width: 1199px) {
+  .timeline-card {
+    width: 65%;
+    height: 75%; }
+
+  /*     .timeline-card-icon{
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+      } */ }
 .education-bachelor {
   grid-column: 1 / 2;
   grid-row: 1 / 4; }
@@ -606,10 +621,11 @@ nav ul > li:hover {
 
 .timeline-card-content {
   position: absolute;
-  aspect-ratio: 1.167;
+  /* aspect-ratio: 1.167; */
+  height: 50%;
   width: 100%;
-  padding: 30px;
-  padding-top: 40%;
+  align-self: flex-end;
+  padding-bottom: clamp(50px, 25%, 70px);
   display: grid;
   grid-template-rows: 0.5fr 0.65fr min-content 0.75fr min-content;
   row-gap: 3%; }
@@ -617,7 +633,7 @@ nav ul > li:hover {
 @media (max-width: 1199px) {
   .timeline-card-content {
     row-gap: 1%;
-    grid-template-rows: 0.5fr 0.65fr min-content 0.75fr 0.5fr; } }
+    grid-template-rows: 1fr 2fr 1fr 1.5fr 1fr; } }
 .education-time-interval {
   font-size: calc(var(--step--1) + 2px);
   font-weight: 500;

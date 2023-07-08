@@ -7,20 +7,26 @@
   @mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }
   }
-  @mixin for-tablet-landscape-down {
-    @media (max-width: 1199px) { @content; }
-  }
   @mixin for-desktop-up {
     @media (min-width: 1200px) { @content; }
   }
   @mixin for-big-desktop-up {
     @media (min-width: 1800px) { @content; }
   }
+  @mixin for-tablet-landscape-down {
+    @media (max-width: 1199px) { @content; }
+  }
   @mixin for-tablet-portrait-down {
     @media (max-width: 899px) { @content; }
   }
+  @mixin for-desktop-only {
+    @media (min-width:1200px) and (max-width:1799px) { @content; }
+  }
   @mixin for-tablet-landscape-only {
     @media (min-width:900px) and (max-width:1199px) { @content; }
+  }
+  @mixin for-half-desktop-only{
+    @media (min-width:1200px) and (max-width:1499px) { @content; }
   }
 
   @mixin reset-button-style{
@@ -56,7 +62,7 @@
     -o-transform:translateY(-50%);
 }
 
-@mixin timeline-card-logo($padding : 2.5rem , $smallpad : 2rem){
+@mixin timeline-card-logo($bigpadding : 3rem,$mediumpadding : 2.4rem,$smallpadding : 1.2rem){
     
     position: relative;
     z-index: 2;
@@ -64,8 +70,11 @@
     background-size: contain; 
     background-repeat: no-repeat;
     background-origin: border-box;
-    padding:$padding;
-    @include for-tablet-portrait-down(){
-      padding: $smallpad;
+    padding:$bigpadding;
+    @include for-tablet-landscape-down(){
+      padding: $mediumpadding;
+    }
+    @include for-phone-only(){
+      padding: $smallpadding;
     }
 }

@@ -13,7 +13,8 @@
     position: relative;
 /*     width: 320px; */
     height: 100%;
-    aspect-ratio: 0.7111;
+    width: 50%;
+/*     aspect-ratio: 0.7111; */
     background: #287bff;
     border-radius: 20px;
     border-bottom-left-radius: 160px;
@@ -26,11 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-}
-@include for-tablet-portrait-down{
-    .timeline-card{
-        height: 70%;
-    }
+    flex-direction: row;
 }
 
 .timeline-card::before {
@@ -48,10 +45,10 @@
     z-index: -2;
 }
 
-.timeline-card:hover::before {
+.timeline-card:hover::before, .timeline-card:active::before, .timeline-card:focus::before, .timeline-card:focus-within::before {
     transform: translateY(-50%);
 }
-.timeline-card:hover, .timeline-card:active{
+.timeline-card:hover, .timeline-card:active, .timeline-card:focus, .timeline-card:focus-within{
         animation-name: floating;
         animation-duration: 3s;
         animation-iteration-count: infinite;
@@ -67,11 +64,12 @@
 .timeline-card-icon {
 /*     width: 140px; */
     height: 26.667%;
-    aspect-ratio: 1.167;
+    width: 45%;
+/*     aspect-ratio: 1.167; */
     background: #174ea6;
     position: relative;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
     box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1),
         inset 0 -4px 0 #fff;
     z-index: 1;
@@ -105,15 +103,26 @@
 
 .timeline-card-icon .ist-logo{
     
-    @include timeline-card-logo($padding:2.5rem);
+    @include timeline-card-logo();
     background-image: url(../assets/svg/tecnico_logo.svg);
 
 }
 .timeline-card-icon .iefp-logo{
     
-    @include timeline-card-logo;
+    @include timeline-card-logo();
     background-image: url(../assets/svg/iefp_logo.svg);
 
+}
+
+@include for-tablet-landscape-down{
+    .timeline-card{
+        width:65%;
+        height: 75%;
+    }
+/*     .timeline-card-icon{
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    } */
 }
 
 .education-bachelor{
@@ -170,10 +179,12 @@
 
 .timeline-card-content{
     position: absolute;
-    aspect-ratio: 1.167;
+    /* aspect-ratio: 1.167; */
+    height:50%;
     width: 100%;
-    padding: 30px;
-    padding-top: 40%;
+    align-self:flex-end;
+    padding-bottom: clamp(50px,25%,70px);
+
 
     display: grid;
     grid-template-rows: 0.5fr 0.65fr min-content 0.75fr min-content;
@@ -183,7 +194,7 @@
 @include for-tablet-landscape-down{
    .timeline-card-content{
     row-gap: 1%;
-    grid-template-rows: 0.5fr 0.65fr min-content 0.75fr 0.5fr;
+    grid-template-rows: 1fr 2fr 1fr 1.5fr 1fr;
    }
 }
 
