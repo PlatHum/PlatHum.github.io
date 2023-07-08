@@ -12,7 +12,7 @@
 .timeline-card {
     position: relative;
 /*     width: 320px; */
-    height: 90%;
+    height: 100%;
     aspect-ratio: 0.7111;
     background: #287bff;
     border-radius: 20px;
@@ -173,10 +173,11 @@
     aspect-ratio: 1.167;
     width: 100%;
     padding: 30px;
-    padding-top: 125px;
+    padding-top: 40%;
 
     display: grid;
     grid-template-rows: 0.5fr 0.65fr min-content 0.75fr min-content;
+    
     row-gap: 3%;
 }
 @include for-tablet-landscape-down{
@@ -190,25 +191,38 @@
     font-size: calc(var(--step--1) + 2px);
     font-weight: 500;
     text-align: center;
+    grid-row: 1 / 2;
+    vertical-align: top;
 }
 
 .education-degree{
     font-size: var(--step-0);
     font-weight: 600;
     text-align: center;
+    grid-row: 3 / 4;
+    vertical-align: top;
 }
 
 .education-course, .education-specialization{
     font-size: var(--step-0);
     font-weight: 500;
     text-align: center;
+    vertical-align: top;
 }
+
+.education-course{
+    grid-row: 4 / 5 ;
+}
+
 .education-specialization{
     font-weight: 600;
+    grid-row: 5 / 6;
 }
 
 .education-institution{
     font-size: var(--step-0);
     font-weight: 700;
     text-align: center;
+    grid-row: 2 / 3;
+    vertical-align: top;
 }
