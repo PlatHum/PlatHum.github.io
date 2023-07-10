@@ -21,19 +21,28 @@
     <section id="Home">
       {% include home.html %}
     </section>
+    <div class="ribbon-title" id="TitleAbout">//ABOUT</div>
     <section id="About">
+      <div class="ribbon-subtitle" id="SubTitleSkills">SKILLS</div>
         <section id="Skills">
           {% include skills.html %}
         </section>
+      <div class="ribbon-subtitle" id="SubTitleEducation">EDUCATION</div>
         <section id="Education">
           {% include education.html %}
         </section>
     </section>
+    <div class="ribbon-title" id="TitleExperience">//EXPERIENCE</div>
     <section id="Experience">
-      <section id="Work">Work</section>
-      <section id="Projects">Projects</section>
+      <div class="ribbon-subtitle" id="SubTitleWork">Work</div>
+      <section id="Work">
+        {% include work.html %}
+      </section>
+      <div class="ribbon-subtitle" id="SubTitleProjects">Projects</div>
+      <section id="Projects"></section>
     </section>
-    <section id="Contact">Contact</section>
+    <div class="ribbon-title" id="TitleContact">//CONTACT</div>
+    <section id="Contact"> Hello</section>
 </div>
 
 

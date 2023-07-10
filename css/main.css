@@ -127,29 +127,100 @@ a:hover {
 
 .content {
   display: grid;
-  grid-template-rows: max-content max-content max-content 1fr;
-  margin-left: clamp(7.5vw, 1.35vw, 1vw);
-  margin-right: clamp(7.5vw, 1.35vw, 1vw);
-  flex: 1;
-  row-gap: 10vh; }
+  grid-template-rows: max-content clamp(50px, 15vh, 250px) max-content clamp(50px, 15vh, 250px) max-content clamp(50px, 15vh, 250px) 200px;
+  grid-template-columns: clamp(13px, 3.5vw, 100px) clamp(13px, 3.5vw, 100px) 1fr clamp(12px, 3.5vw, 100px) clamp(12px, 3.5vw, 100px);
+  flex: 1; }
+
+.ribbon-title {
+  align-self: center;
+  /*      writing-mode: sideways-lr; */
+  grid-column: 2 / 5;
+  justify-self: center;
+  font-weight: 600;
+  font-size: var(--step-2);
+  text-shadow: 1px 1px 1px #4FDA55; }
+
+.ribbon-subtitle {
+  display: flex;
+  text-align: left;
+  text-indent: 5rem;
+  writing-mode: sideways-rl;
+  grid-column: 3 / 4;
+  font-weight: 600;
+  font-size: var(--step-1);
+  color: #4FDA55;
+  align-items: center;
+  justify-content: left;
+  height: 100%;
+  width: 75%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.83); }
 
 #Home {
-  grid-row: 1 / 2; }
+  grid-row: 1 / 2;
+  grid-column: 3 / 4; }
+
+#TitleAbout {
+  grid-row: 2 / 3; }
 
 #About {
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
+  grid-column: 2 / 5;
   display: grid;
+  grid-template-columns: clamp(12px, 3.5vw, 100px) 1fr clamp(12px, 3.5vw, 100px);
   grid-template-rows: max-content max-content;
-  row-gap: 10vh; }
+  row-gap: clamp(50px, 15vh, 250px); }
+
+#SubTitleSkills {
+  grid-row: 1 / 2; }
 
 #Skills {
-  place-self: center; }
+  grid-column: 2 / 3;
+  grid-row: 1 / 2; }
+
+#SubTitleEducation {
+  grid-row: 2 / 3; }
+
+#Education {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3; }
+
+#TitleExperience {
+  grid-row: 4 / 5; }
 
 #Experience {
-  grid-row: 3 / 4; }
+  grid-row: 5 / 6;
+  grid-column: 2 / 5;
+  display: grid;
+  grid-template-columns: clamp(12px, 3.5vw, 100px) 1fr clamp(12px, 3.5vw, 100px);
+  grid-template-rows: max-content max-content;
+  row-gap: clamp(50px, 15vh, 250px); }
+
+#SubTitleWork {
+  grid-row: 1 /2; }
+
+#Work {
+  grid-row: 1 /2;
+  grid-column: 2 / 3; }
+
+#SubTitleProjects {
+  grid-row: 2 / 3; }
+
+#Projects {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3; }
+
+#TitleContact {
+  grid-row: 6 / 7; }
 
 #Contact {
-  grid-row: 4 / 5; }
+  grid-row: 7 / 8;
+  grid-column: 3 / 4; }
 
 /* END GLOBAL STYLES*/
 /* Navigation bar style */
@@ -435,9 +506,6 @@ nav ul > li:hover {
   justify-self: center; }
 
 .skills-div {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   display: grid;
   gap: 2rem;
   grid-template-areas: 'one nine' 'two nine' 'three nine' 'four nine' 'five nine' 'six nine' 'seven nine' 'eight nine';
@@ -447,7 +515,7 @@ nav ul > li:hover {
   justify-items: left;
   font-weight: 500;
   font-size: var(--step-0);
-  height: 50%; }
+  height: 100%; }
 
 .skills-planet {
   height: 0;
@@ -685,3 +753,5 @@ nav ul > li:hover {
   vertical-align: top;
   padding-left: min(3vw, 50px);
   padding-right: min(3vw, 50px); }
+
+/* Work section style */
