@@ -65,7 +65,12 @@ a img {
   --step-5: clamp(1.71rem, calc(1.11rem + 3.23vw), 4.74rem);
   --step-6: clamp(2.05rem, calc(1.20rem + 4.54vw), 6.31rem);
   --step-7: clamp(2.46rem, calc(1.27rem + 6.35vw), 8.41rem);
-  /* 2.46 1.27 6.35*/ }
+  /* Interpolated half steps */
+  --step--1-5: clamp(0.525rem, calc(0.485rem + 0.23vw), 0.735rem);
+  --step--0-5: clamp(0.63rem, calc(0.56rem + 0.38vw), 0.985rem);
+  --step-0-5: clamp(0.76rem, calc(0.645rem + 0.595vw), 1.315rem);
+  --step-1-5: clamp(0.91rem, calc(0.74rem + 0.90vw), 1.75rem);
+  --step-2-5: clamp(1.01rem, calc(0.84rem + 1.325vw), 2.33rem); }
 
 .flex {
   display: flex;
@@ -755,3 +760,109 @@ nav ul > li:hover {
   padding-right: min(3vw, 50px); }
 
 /* Work section style */
+.work-div {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 0.2fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: "ist . fst"; }
+
+.work-blob.work-ist {
+  grid-area: ist; }
+
+.work-blob.work-ist svg path {
+  animation-name: blob-animation-ist;
+  animation-duration: 8s;
+  animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  filter: none; }
+
+.work-blob.work-ist svg .work-svg-group-ist:hover path, .work-blob.work-ist svg .work-svg-group-ist:focus path {
+  animation-play-state: running;
+  filter: url(#glow-effect-ist);
+  /* Apply the filter on hover */ }
+
+@keyframes blob-animation-ist {
+  0% {
+    d: path("M463.5,284Q438,318,423,350.5Q408,383,388,418.5Q368,454,328.5,464Q289,474,249,477.5Q209,481,177,456.5Q145,432,106.5,417.5Q68,403,50.5,366Q33,329,33.5,289.5Q34,250,33,210.5Q32,171,55,138Q78,105,108.5,81.5Q139,58,175,44Q211,30,252,18Q293,6,331.5,24.5Q370,43,401,70Q432,97,436,139Q440,181,464.5,215.5Q489,250,463.5,284Z"); }
+  25% {
+    d: path("M473,290Q471,330,449,364.5Q427,399,396,424Q365,449,328,466.5Q291,484,251,477Q211,470,173,460Q135,450,99.5,428Q64,406,61.5,363Q59,320,43,285Q27,250,26,209Q25,168,42.5,129.5Q60,91,98.5,73Q137,55,172.5,34Q208,13,247.5,26.5Q287,40,324.5,48Q362,56,385.5,86Q409,116,432.5,145.5Q456,175,465.5,212.5Q475,250,473,290Z"); }
+  50% {
+    d: path("M470,286.5Q450,323,440.5,362.5Q431,402,398,426Q365,450,325.5,451.5Q286,453,249,460.5Q212,468,178,450.5Q144,433,113,412Q82,391,71,355Q60,319,42.5,284.5Q25,250,29.5,210.5Q34,171,63.5,145Q93,119,116.5,89.5Q140,60,177.5,55Q215,50,253.5,32.5Q292,15,325.5,38Q359,61,392.5,82Q426,103,450.5,135.5Q475,168,482.5,209Q490,250,470,286.5Z"); }
+  75% {
+    d: path("M449.5,286Q447,322,443,365.5Q439,409,405.5,435Q372,461,329,456.5Q286,452,248,463.5Q210,475,177.5,454Q145,433,115.5,410.5Q86,388,58,359Q30,330,21,290Q12,250,29.5,213Q47,176,54,133.5Q61,91,98,71Q135,51,175,50Q215,49,252.5,34.5Q290,20,332,28Q374,36,393,75Q412,114,431,145.5Q450,177,451,213.5Q452,250,449.5,286Z"); }
+  100% {
+    d: path("M463.5,284Q438,318,423,350.5Q408,383,388,418.5Q368,454,328.5,464Q289,474,249,477.5Q209,481,177,456.5Q145,432,106.5,417.5Q68,403,50.5,366Q33,329,33.5,289.5Q34,250,33,210.5Q32,171,55,138Q78,105,108.5,81.5Q139,58,175,44Q211,30,252,18Q293,6,331.5,24.5Q370,43,401,70Q432,97,436,139Q440,181,464.5,215.5Q489,250,463.5,284Z"); } }
+.work-blob.work-fst {
+  grid-area: fst; }
+
+.work-blob.work-fst svg path {
+  animation-name: blob-animation-fst;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  animation-play-state: paused;
+  filter: none; }
+
+.work-blob.work-fst svg .work-svg-group-fst:hover path, .work-blob.work-fst svg .work-svg-group-fst:focus path {
+  animation-play-state: running;
+  filter: url(#glow-effect-fst);
+  /* Apply the filter on hover */ }
+
+@keyframes blob-animation-fst {
+  0% {
+    d: path("M475,300Q458,350,420,382.5Q382,415,341.5,444.5Q301,474,250.5,471Q200,468,156.5,444.5Q113,421,74.5,387Q36,353,33,301.5Q30,250,47,205Q64,160,84,113.5Q104,67,150.5,42Q197,17,247.5,29Q298,41,339,64Q380,87,407.5,124Q435,161,463.5,205.5Q492,250,475,300Z"); }
+  25% {
+    d: path("M463,301Q463,352,422.5,383.5Q382,415,343.5,453Q305,491,252.5,479.5Q200,468,151.5,451.5Q103,435,74,392Q45,349,39.5,299.5Q34,250,48,204.5Q62,159,91,123Q120,87,160,59.5Q200,32,249.5,34.5Q299,37,337.5,64Q376,91,413,122.5Q450,154,456.5,202Q463,250,463,301Z"); }
+  50% {
+    d: path("M464.5,295Q437,340,417,387.5Q397,435,347,446Q297,457,251,452.5Q205,448,157,437.5Q109,427,69,391.5Q29,356,36,303Q43,250,40,198.5Q37,147,79,117.5Q121,88,161,61.5Q201,35,249.5,37Q298,39,348,52Q398,65,434,104.5Q470,144,481,197Q492,250,464.5,295Z"); }
+  75% {
+    d: path("M485.5,304Q475,358,439,400Q403,442,350.5,452Q298,462,246.5,475.5Q195,489,150,460Q105,431,68.5,393Q32,355,22,302.5Q12,250,29.5,201Q47,152,82,117.5Q117,83,156,46.5Q195,10,249,14Q303,18,352.5,38.5Q402,59,425,107Q448,155,472,202.5Q496,250,485.5,304Z"); }
+  100% {
+    d: path("M475,300Q458,350,420,382.5Q382,415,341.5,444.5Q301,474,250.5,471Q200,468,156.5,444.5Q113,421,74.5,387Q36,353,33,301.5Q30,250,47,205Q64,160,84,113.5Q104,67,150.5,42Q197,17,247.5,29Q298,41,339,64Q380,87,407.5,124Q435,161,463.5,205.5Q492,250,475,300Z"); } }
+.work-blob svg text.job-title {
+  font-size: var(--step-1);
+  font-weight: 700; }
+
+.work-blob svg text.job-company {
+  font-size: var(--step-0);
+  font-weight: 600; }
+
+.work-blob svg text.job-duration {
+  font-size: var(--step--1);
+  font-weight: 500; }
+
+@media (max-width: 1499px) {
+  .work-blob svg text.job-title {
+    font-size: var(--step-1-5); }
+
+  .work-blob svg text.job-company {
+    font-size: var(--step-0-5); }
+
+  .work-blob svg text.job-duration {
+    font-size: var(--step--0-5); } }
+@media (max-width: 899px) {
+  .work-div {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas: "ist" "fst"; } }
+@media (min-width: 600px) and (max-width: 899px) {
+  .work-blob svg text.job-title {
+    font-size: var(--step-3); }
+
+  .work-blob svg text.job-company {
+    font-size: var(--step-2); }
+
+  .work-blob svg text.job-duration {
+    font-size: var(--step-1); } }
+@media (max-width: 599px) {
+  .work-blob svg text.job-title {
+    font-size: var(--step-4); }
+
+  .work-blob svg text.job-company {
+    font-size: var(--step-3); }
+
+  .work-blob svg text.job-duration {
+    font-size: var(--step-2); } }
