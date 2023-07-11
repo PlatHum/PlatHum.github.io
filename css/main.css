@@ -145,27 +145,29 @@ a:hover {
   font-size: var(--step-2);
   text-shadow: 1px 1px 1px #4FDA55; }
 
-.ribbon-subtitle {
-  display: flex;
-  text-align: left;
-  text-indent: 5rem;
-  writing-mode: sideways-rl;
-  grid-column: 3 / 4;
-  font-weight: 600;
-  font-size: var(--step-1);
-  color: #4FDA55;
-  align-items: center;
-  justify-content: left;
-  height: 100%;
-  width: 75%;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  border: 1px solid rgba(255, 255, 255, 0.83); }
+/* .ribbon-subtitle{
+     display: flex;
 
+     text-align: left;
+     text-indent: 5rem;
+     writing-mode: sideways-rl;
+     grid-column: 3 / 4;
+     font-weight: 600;
+     font-size: var(--step-1);
+     color: #4FDA55;
+     align-items: center;
+     justify-content: left;
+
+     height: 100%;
+     width: 75%;
+
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1px);
+-webkit-backdrop-filter: blur(1px);
+border: 1px solid rgba(255, 255, 255, 0.83);
+} */
 #Home {
   grid-row: 1 / 2;
   grid-column: 3 / 4; }
@@ -181,16 +183,16 @@ a:hover {
   grid-template-rows: max-content max-content;
   row-gap: clamp(50px, 15vh, 250px); }
 
-#SubTitleSkills {
-  grid-row: 1 / 2; }
-
+/* #SubTitleSkills{
+     grid-row: 1 / 2;
+} */
 #Skills {
   grid-column: 2 / 3;
   grid-row: 1 / 2; }
 
-#SubTitleEducation {
-  grid-row: 2 / 3; }
-
+/* #SubTitleEducation{
+     grid-row: 2 / 3;
+} */
 #Education {
   grid-column: 2 / 3;
   grid-row: 2 / 3; }
@@ -206,16 +208,16 @@ a:hover {
   grid-template-rows: max-content max-content;
   row-gap: clamp(50px, 15vh, 250px); }
 
-#SubTitleWork {
-  grid-row: 1 /2; }
-
+/* #SubTitleWork{
+     grid-row: 1 /2;
+} */
 #Work {
   grid-row: 1 /2;
   grid-column: 2 / 3; }
 
-#SubTitleProjects {
-  grid-row: 2 / 3; }
-
+/* #SubTitleProjects{
+     grid-row: 2 / 3;
+} */
 #Projects {
   grid-row: 2 / 3;
   grid-column: 2 / 3; }
