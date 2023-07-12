@@ -1,5 +1,5 @@
 const navBarHeight = document.querySelector('.header').offsetHeight;
-document.documentElement.style.setProperty('--scroll-padding',navBarHeight +90 +"px")
+document.documentElement.style.setProperty('--scroll-padding',navBarHeight -1 +"px")
 
 const headerNav = document.querySelector('.header-nav');
 const navToggle = document.querySelector('.mobile-nav-toggle');

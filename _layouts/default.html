@@ -22,30 +22,31 @@
     <section id="Home">
       {% include home.html %}
     </section>
-    <div class="ribbon-title" id="TitleAbout">//ABOUT</div>
     <section id="About">
-<!--       <div class="ribbon-subtitle" id="SubTitleSkills">SKILLS</div> -->
-        <section id="Skills">
-          {% include skills.html %}
-        </section>
-<!--       <div class="ribbon-subtitle" id="SubTitleEducation">EDUCATION</div> -->
-        <section id="Education">
-          {% include education.html %}
+      <div class="section-title"><span class="high-l2">//</span>About</div>
+      <section id="Skills">
+        <div class="sub-section-title" skills><span class="high-l2">/*</span>Skills<span class="high-l2">*/</span></div>
+        {% include skills.html %}
+      </section>
+      <section id="Education">
+        <div class="sub-section-title" education><span class="high-l2">/*</span>Education<span class="high-l2">*/</span></div>
+        {% include education.html %}
         </section>
     </section>
-    <div class="ribbon-title" id="TitleExperience">//EXPERIENCE</div>
     <section id="Experience">
-<!--       <div class="ribbon-subtitle" id="SubTitleWork">Work</div> -->
+      <div class="section-title"><span class="high-l2">//</span>Experience</div>
       <section id="Work">
+        <div class="sub-section-title" work><span class="high-l2">/*</span>Work<span class="high-l2">*/</span></div>
         {% include work.html %}
       </section>
-<!--       <div class="ribbon-subtitle" id="SubTitleProjects">Projects</div> -->
       <section id="Projects">
+        <div class="sub-section-title" projects><span class="high-l2">/*</span>Projects<span class="high-l2">*/</span></div>
         {% include projects.html %}
       </section>
     </section>
-    <div class="ribbon-title" id="TitleContact">//CONTACT</div>
-    <section id="Contact"> Hello</section>
+    <section id="Contact"> 
+      <div class="section-title"><span class="high-l2">//</span>Contact</div>
+    </section>
 </div>
 
 
