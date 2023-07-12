@@ -3,34 +3,62 @@
 .skills-programming-text{
     grid-area: one;
     font-size: var(--step-2);
+    letter-spacing: -0.1rem;
+    justify-self: center;
   }
   .skills-programming-icons{
     grid-area: two;
     justify-self: center;
+    background-color: rgba(0, 85, 255, 0.284);
+    padding-bottom: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   .skills-simulation-text{
     grid-area: three;
     font-size: var(--step-2);
+    letter-spacing: -0.1rem;
+    justify-self: center;
   }
   .skills-simulation-icons{
     grid-area: four;
     justify-self: center;
+    background-color: rgba(0, 85, 255, 0.284);
+    padding-bottom: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   .skills-modeling-text{
     grid-area: five;
     font-size: var(--step-2);
+    letter-spacing: -0.1rem;
+    justify-self: center;
   }
   .skills-modeling-icons{
     grid-area: six;
     justify-self: center;
+    background-color: rgba(0, 85, 255, 0.284);
+    padding-bottom: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   .skills-other-text{
     grid-area: seven;
     font-size: var(--step-2);
+    letter-spacing: -0.1rem;
+    justify-self: center;
   }
   .skills-other-icons{
     grid-area: eight;
     justify-self: center;
+    background-color: rgba(0, 85, 255, 0.284);
+    padding-bottom: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   .skills-planet{
     grid-area: nine;
@@ -39,7 +67,7 @@
   }
   .skills-div{
     display: grid;
-    gap: 2rem;
+    row-gap: 1rem;
     grid-template-areas: 
     'one nine'
     'two nine'
