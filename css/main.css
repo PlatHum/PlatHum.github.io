@@ -1116,6 +1116,14 @@ nav ul > li:hover {
   background-color: var(--current-color2);
   padding: 1rem; }
 
+.youtube-icon {
+  -webkit-mask: url(../assets/svg/youtube-svgrepo-com.svg) no-repeat 100% 100%;
+  mask: url(../assets/svg/youtube-svgrepo-com.svg) no-repeat 100% 100%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--current-color2);
+  padding: 1rem; }
+
 #s1:checked ~ .cards #slide4,
 #s2:checked ~ .cards #slide5,
 #s3:checked ~ .cards #slide1,
