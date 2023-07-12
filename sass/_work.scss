@@ -94,8 +94,12 @@
   font-weight:500;
 }
 
-
-
+.work-div .down-svg{
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+  justify-self: center;
+  align-self: last baseline;
+}
 
 @include for-half-desktop-down{
 
@@ -111,11 +115,25 @@
 }
 @include for-tablet-portrait-down{
   .work-div{
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: minmax(100px,auto);
-    grid-template-areas: 
+    grid-template-columns: repeat(1,1fr); 
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto) min-content;
+/*     grid-template-areas: 
     "ist"
-    "fst";
+    "fst"; */
+  }
+  .work-blob.work-fst{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  .work-blob.work-fst{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  .work-div .down-svg{
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    justify-self: center;
+    align-self: baseline;
   }
 }
 @include for-tablet-portrait-only{

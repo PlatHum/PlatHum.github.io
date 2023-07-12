@@ -53,4 +53,27 @@
   .grid-col-span-2{
     grid-column: span 2;
   }
+
+  .down-svg{
+  
+    background-image: url(../assets/svg/down-arrow-4-svgrepo-com.svg);
+    background-position: center; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-top: 5px;
+    animation: goDown 1s infinite  alternate;
+    animation-play-state: paused;
+    text-decoration: none;
+  }
+  
+  .down-svg:hover{
+    animation-play-state: running;
+  }
+  
+  @keyframes goDown {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
 /* END UTILITY STYLES*/

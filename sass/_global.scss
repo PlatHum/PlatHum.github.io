@@ -34,7 +34,7 @@ a:hover{
 .content{
      display: grid;
      grid-template-rows:max-content max-content max-content 200px;
-     grid-template-columns: clamp(13px,3.5vw, 100px) clamp(13px,3.5vw, 100px) 1fr clamp(12px,3.5vw, 100px) clamp(12px,3.5vw, 100px);
+     grid-template-columns: clamp(13px,2.5vw, 60px) clamp(13px,3.5vw, 100px) 1fr clamp(13px,3.5vw, 100px) clamp(13px,2vw, 60px);
      flex: 1;
      row-gap: min(15vh,250px);
 }
@@ -80,6 +80,10 @@ a:hover{
      display: grid;
      grid-template-rows: clamp(75px, 11vh, 140px) max-content;
 }
+#Skills .sub-section-title{
+     grid-row: 1 / 2;
+     grid-column: 1 / 2;
+}
 
 #Education{
      grid-row: 3 / 4;
@@ -87,6 +91,12 @@ a:hover{
      display: grid;
      grid-template-rows: clamp(75px, 11vh, 140px) max-content;
 }
+
+#Education .sub-section-title{
+     grid-row: 1 / 2;
+     grid-column: 1 / 2;
+}
+
 #Experience{
      
      grid-row: 3 / 4;
@@ -100,17 +110,27 @@ a:hover{
      grid-column: 2 / 3;
 }
 #Work{
-     grid-row: 3 /4;
+     grid-row: 2 / 3;
      grid-column: 2 / 3;
      display: grid;
      grid-template-rows: clamp(75px, 11vh, 140px) max-content;
 }
+#Work .sub-section-title{
+     grid-row: 1 / 2;
+     grid-column: 1 / 2;
+}
+
 #Projects{
-     grid-row: 5 / 6;
+     grid-row: 3 / 4;
      grid-column: 2 / 3;
      display: grid;
      grid-template-rows: clamp(75px, 11vh, 140px) max-content;
 
+}
+
+#Projects .sub-section-title{
+     grid-row: 1 / 2;
+     grid-column: 1 / 2;
 }
 
 #Contact{

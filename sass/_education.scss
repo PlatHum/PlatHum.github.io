@@ -260,3 +260,11 @@
     padding-left: min(3vw,50px);
     padding-right: min(3vw,50px);
 }
+
+/* DOWN SVG */
+.education-container .down-svg{
+    grid-row: 7 / 8;
+    grid-column: 1 / 4;
+    justify-self: center;
+    align-self: last baseline;
+  }
