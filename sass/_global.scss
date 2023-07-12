@@ -1,13 +1,14 @@
 /* START GLOBAL STYLES*/
 body {
     font-family: 'JetbrainsMono',monospace, helvetica, arial, sans;
-    background-color: #174ea6;
+    /* background-color: #174ea6; */
     color:snow;
     overflow-x: hidden;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     min-width: 300px;
+    position: relative;
    }
 
 /* section{

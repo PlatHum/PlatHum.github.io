@@ -16,7 +16,7 @@
     width: 40%;
     min-width: 320px;
 /*     aspect-ratio: 0.7111; */
-    background: #287bff;
+    background: #000;
     border-radius: 20px;
     border-bottom-left-radius: 160px;
     border-bottom-right-radius: 160px;
@@ -67,7 +67,7 @@
     height: 26.667%;
     width: 45%;
 /*     aspect-ratio: 1.167; */
-    background: #174ea6;
+    background: #000;
     position: relative;
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 45%;
@@ -87,7 +87,7 @@
     height: 50px;
     background: transparent;
     border-top-right-radius: 50px;
-    box-shadow: 15px -15px 0 15px #174ea6;
+    box-shadow: 15px -15px 0 15px #000;
 }
 
 .timeline-card-icon::after {
@@ -99,7 +99,7 @@
     height: 50px;
     background: transparent;
     border-top-left-radius: 50px;
-    box-shadow: -15px -15px 0 15px #174ea6;
+    box-shadow: -15px -15px 0 15px #000;
 }
 
 .timeline-card-icon .ist-logo{

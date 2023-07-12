@@ -124,13 +124,14 @@ a img {
 /* START GLOBAL STYLES*/
 body {
   font-family: 'JetbrainsMono',monospace, helvetica, arial, sans;
-  background-color: #174ea6;
+  /* background-color: #174ea6; */
   color: snow;
   overflow-x: hidden;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  min-width: 300px; }
+  min-width: 300px;
+  position: relative; }
 
 /* section{
      min-width: 300px;
@@ -251,6 +252,41 @@ a:hover {
   grid-column: 2 / 3; }
 
 /* END GLOBAL STYLES*/
+/* Background style */
+.stars, .twinkling, .clouds {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%; }
+
+.stars {
+  z-index: -4;
+  background: #000 url("../assets/png/stars.png") repeat top center; }
+
+.twinkling {
+  z-index: -3;
+  background: transparent url("../assets/png/twinkling.png") repeat top center;
+  animation: move-twink-back 200s linear infinite; }
+
+.clouds {
+  z-index: -2;
+  background: transparent url("../assets/png/clouds.png") repeat top center;
+  animation: move-clouds-back 200s linear infinite; }
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 10000px 0; } }
 /* Navigation bar style */
 /*START HEADER STYLES*/
 .header {
@@ -371,7 +407,7 @@ nav ul > li:hover {
         -webkit-backdrop-filter: blur(1rem); } } }
 /*LOGO SVG*/
 .header-logo {
-  background-image: url(../assets/svg/Caybara-Logo.svg);
+  background-image: url(../assets/svg/Caybara-Logo-icon.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -407,7 +443,7 @@ nav ul > li:hover {
   height: 0;
   width: 70%;
   padding-bottom: 70%;
-  background-color: rgba(0, 85, 255, 0.284);
+  background-color: rgba(0, 85, 255, 0);
   z-index: -1;
   grid-row-start: 1;
   grid-row-end: 3;
@@ -584,7 +620,7 @@ nav ul > li:hover {
   width: 40%;
   min-width: 320px;
   /*     aspect-ratio: 0.7111; */
-  background: #287bff;
+  background: #000;
   border-radius: 20px;
   border-bottom-left-radius: 160px;
   border-bottom-right-radius: 160px;
@@ -628,7 +664,7 @@ nav ul > li:hover {
   height: 26.667%;
   width: 45%;
   /*     aspect-ratio: 1.167; */
-  background: #174ea6;
+  background: #000;
   position: relative;
   border-bottom-left-radius: 45%;
   border-bottom-right-radius: 45%;
@@ -646,7 +682,7 @@ nav ul > li:hover {
   height: 50px;
   background: transparent;
   border-top-right-radius: 50px;
-  box-shadow: 15px -15px 0 15px #174ea6; }
+  box-shadow: 15px -15px 0 15px #000; }
 
 .timeline-card-icon::after {
   content: '';
@@ -657,7 +693,7 @@ nav ul > li:hover {
   height: 50px;
   background: transparent;
   border-top-left-radius: 50px;
-  box-shadow: -15px -15px 0 15px #174ea6; }
+  box-shadow: -15px -15px 0 15px #000; }
 
 .timeline-card-icon .ist-logo {
   position: relative;
