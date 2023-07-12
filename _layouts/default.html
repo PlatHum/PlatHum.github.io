@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script src="assets/js/header_nav.js" defer></script>  
   <meta charset="utf-8">
@@ -39,7 +40,9 @@
         {% include work.html %}
       </section>
 <!--       <div class="ribbon-subtitle" id="SubTitleProjects">Projects</div> -->
-      <section id="Projects"></section>
+      <section id="Projects">
+        {% include projects.html %}
+      </section>
     </section>
     <div class="ribbon-title" id="TitleContact">//CONTACT</div>
     <section id="Contact"> Hello</section>
@@ -47,6 +50,7 @@
 
 
   <script src="assets/js/no_animation.js" defer></script>
+  <script src="assets/js/carousel.js" defer></script>
 
 </body>
 </html>
