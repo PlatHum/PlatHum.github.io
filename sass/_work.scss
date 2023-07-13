@@ -20,7 +20,7 @@
     filter: none;
   }
   
-  .work-blob.work-ist svg .work-svg-group-ist:hover path, .work-blob.work-ist svg .work-svg-group-ist:focus path{
+  .work-blob.work-ist svg .work-svg-group-ist:hover path, .work-blob.work-ist svg .work-svg-group-ist:focus path, .work-blob.work-ist svg path.animate{
     animation-play-state: running;
     filter: url(#glow-effect-ist); /* Apply the filter on hover */
   }
@@ -56,7 +56,7 @@
   filter:none;
 }
 
-.work-blob.work-fst svg .work-svg-group-fst:hover path, .work-blob.work-fst svg .work-svg-group-fst:focus path{
+.work-blob.work-fst svg .work-svg-group-fst:hover path, .work-blob.work-fst svg .work-svg-group-fst:focus path, .work-blob.work-fst svg path.animate{
   animation-play-state: running;
   filter: url(#glow-effect-fst); /* Apply the filter on hover */
 }

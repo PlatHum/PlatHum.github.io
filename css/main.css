@@ -643,10 +643,10 @@ nav ul > li:hover {
   transition: transform 3s;
   z-index: -2; }
 
-.timeline-card:hover::before, .timeline-card:focus::before, .timeline-card:focus-within::before {
+.timeline-card:hover::before, .timeline-card:focus::before, .timeline-card:focus-within::before, .timeline-card.animate::before {
   transform: translateY(-50%); }
 
-.timeline-card:hover, .timeline-card:focus, .timeline-card:focus-within {
+.timeline-card:hover, .timeline-card:focus, .timeline-card:focus-within, .timeline-card.animate {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -861,7 +861,7 @@ nav ul > li:hover {
   animation-play-state: paused;
   filter: none; }
 
-.work-blob.work-ist svg .work-svg-group-ist:hover path, .work-blob.work-ist svg .work-svg-group-ist:focus path {
+.work-blob.work-ist svg .work-svg-group-ist:hover path, .work-blob.work-ist svg .work-svg-group-ist:focus path, .work-blob.work-ist svg path.animate {
   animation-play-state: running;
   filter: url(#glow-effect-ist);
   /* Apply the filter on hover */ }
@@ -888,7 +888,7 @@ nav ul > li:hover {
   animation-play-state: paused;
   filter: none; }
 
-.work-blob.work-fst svg .work-svg-group-fst:hover path, .work-blob.work-fst svg .work-svg-group-fst:focus path {
+.work-blob.work-fst svg .work-svg-group-fst:hover path, .work-blob.work-fst svg .work-svg-group-fst:focus path, .work-blob.work-fst svg path.animate {
   animation-play-state: running;
   filter: url(#glow-effect-fst);
   /* Apply the filter on hover */ }

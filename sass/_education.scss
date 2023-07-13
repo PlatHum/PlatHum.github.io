@@ -46,10 +46,10 @@
     z-index: -2;
 }
 
-.timeline-card:hover::before, .timeline-card:focus::before, .timeline-card:focus-within::before {
+.timeline-card:hover::before, .timeline-card:focus::before, .timeline-card:focus-within::before, .timeline-card.animate::before {
     transform: translateY(-50%);
 }
-.timeline-card:hover, .timeline-card:focus, .timeline-card:focus-within{
+.timeline-card:hover, .timeline-card:focus, .timeline-card:focus-within, .timeline-card.animate{
         animation-name: floating;
         animation-duration: 3s;
         animation-iteration-count: infinite;
