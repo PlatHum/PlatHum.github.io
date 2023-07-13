@@ -55,11 +55,11 @@
 }
 
 .arrow-left {
-    left: 10px;
+    left: -25%;
 }
 
 .arrow-right {
-    right: 10px;
+    right: -25%;
 }
 
 .arrow-right svg{
@@ -110,6 +110,11 @@
     width: 86%;
     height: 220px;
     object-fit: cover;
+}
+
+.projects-coding{
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
 .projects-coding div{
@@ -238,23 +243,6 @@
     letter-spacing: 3px;
 }
 
-.card .btn-contact{
-
-    width: 100%;
-    height: 60px;
-    margin: 35px auto;
-    border-radius: 5px;
-    background-color: var(--current-color1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 25px;
-    letter-spacing: 10px;
-    font-weight: 700;
-    transition: all .7s ease;
-}
-
 .card .socials{
 
     display: flex;
@@ -321,7 +309,7 @@
     box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
     transform: translate3d(-70%, 0, -220px);
     --current-color1: #ECEAED;
-    --current-color2: #404457;
+    --current-color2: #696c7b;
 }
 
 #s1:checked~.cards #slide5,
@@ -332,7 +320,7 @@
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
     transform: translate3d(-35%, 0, -120px);
     --current-color1: #ECEAED;
-    --current-color2: #404457;
+    --current-color2: #696c7b;
 }
 
 #s1:checked~.cards #slide1,
@@ -342,7 +330,7 @@
 #s5:checked~.cards #slide5 {
     box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%);
     transform: translate3d(0, 0, 0);
-    --current-color1: #fad00c;
+    --current-color1: #8B5DF5;
     --current-color2: #ECEAED;
     pointer-events: none;
 }
@@ -364,7 +352,7 @@
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
     transform: translate3d(35%, 0, -120px);
     --current-color1: #ECEAED;
-    --current-color2: #404457;
+    --current-color2: #696c7b;
 }
 
 #s1:checked~.cards #slide3,
@@ -375,5 +363,5 @@
     box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
     transform: translate3d(70%, 0, -220px);
     --current-color1: #ECEAED;
-    --current-color2: #404457;
+    --current-color2: #696c7b;
 }
