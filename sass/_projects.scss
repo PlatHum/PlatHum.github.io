@@ -1,8 +1,8 @@
 .projects-div{
     display: grid;
-    grid-template-rows: 0.95fr 0.05fr;
+    grid-template-rows: minmax(350px,800px) 50px;
     grid-template-columns: 1fr;
-    row-gap: 10%;
+    row-gap: 30%;
 }
 
 .projects-div .down-svg{
@@ -13,12 +13,14 @@
   }
 
 .carousel-container{
+    position: relative;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
 }
 
 .carousel-container input {
@@ -56,10 +58,17 @@
 
 .arrow-left {
     left: -25%;
+    @include for-tablet-portrait-down{
+        left: 0;
+    }
 }
 
 .arrow-right {
     right: -25%;
+
+    @include for-tablet-portrait-down{
+        right: 0;
+    }
 }
 
 .arrow-right svg{
@@ -67,19 +76,19 @@
 }
 
 .cards {
-
+    box-sizing: border-box;
     position: relative;
-    height: 500px;
-    width: 430px;
+    height: clamp(300px,40vmin,500px);
+    width: clamp(310px,34.4vw,430px);
     margin-bottom: 20px;
     perspective: 1000px;
     transform-style: preserve-3d;
 }
 
 .cards label {
-
+    box-sizing: border-box;
     position: absolute;
-    width: 430px;
+    width: clamp(310px,34.4vw,430px);
     left: 0;
     right: 0;
     margin: auto;
@@ -103,7 +112,7 @@
 }
 
 .card .image img{
-
+    box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
     margin-top: 23px;
@@ -113,16 +122,17 @@
 }
 
 .projects-coding{
+    box-sizing: border-box;
     margin-top: 8%;
     margin-bottom: 8%;
 }
 
 .projects-coding div{
-
+    box-sizing: border-box;
     height: 2rem;
     width: 2rem;
     border-radius: 10%;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .cpp-logo{
@@ -227,7 +237,7 @@
 }
 
 .infos .name{
-
+    box-sizing: border-box;
     font-size: 30px;
     color: var(--current-color1);
     letter-spacing: 8px;
@@ -365,3 +375,13 @@
     --current-color1: #ECEAED;
     --current-color2: #696c7b;
 }
+/* Styles to hide non-checked cards on mobile */
+@include for-tablet-portrait-down{
+    #s1:not(:checked) ~ .cards #slide1,
+    #s2:not(:checked) ~ .cards #slide2,
+    #s3:not(:checked) ~ .cards #slide3,
+    #s4:not(:checked) ~ .cards #slide4,
+    #s5:not(:checked) ~ .cards #slide5 {
+      display: none;
+    }
+  }

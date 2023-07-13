@@ -1,9 +1,10 @@
 /*START HOME SECTION STYLES*/
 .home-div{
   width: 100%;
+  max-height: 100vh;
   display:grid;
-  grid-template-columns: 0.75fr 1fr 1fr 1fr;
-  grid-template-rows: 2.5fr 1fr;
+  grid-template-columns: 0.75fr 1fr 1fr minmax(60px,400px);
+  grid-template-rows: 2.5fr minmax(60px,400px);
 
   font-size: var(--step-3);
 
