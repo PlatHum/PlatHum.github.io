@@ -631,7 +631,12 @@ nav ul > li:hover {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: row; }
+  flex-direction: row;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused; }
 
 .timeline-card::before {
   content: "";
@@ -644,14 +649,11 @@ nav ul > li:hover {
   transition: transform 3s;
   z-index: -2; }
 
-.timeline-card:hover::before, .timeline-card:focus::before, .timeline-card:focus-within::before, .timeline-card.animate::before {
+.timeline-card:hover::before, .timeline-card.animate::before {
   transform: translateY(-50%); }
 
-.timeline-card:hover, .timeline-card:focus, .timeline-card:focus-within, .timeline-card.animate {
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; }
+.timeline-card:hover, .timeline-card.animate {
+  animation-play-state: running; }
 
 @keyframes floating {
   0% {
@@ -752,7 +754,7 @@ nav ul > li:hover {
 .education-bachelor::before {
   background: linear-gradient(to bottom, #879AF2, #D3208B, #FDA000); }
 
-.education-bachelor:hover {
+.education-bachelor:hover, .education-bachelor.animate {
   box-shadow: 0 7px 0 #fff, inset 0 -5px 0 rgba(255, 255, 255, 0.25), 0 25px 25px #fda0008a; }
 
 .education-master {
@@ -762,7 +764,7 @@ nav ul > li:hover {
 .education-master::before {
   background: linear-gradient(to bottom, #2646BE, #A682FB, #FFC7A6); }
 
-.education-master:hover {
+.education-master:hover, .education-master.animate {
   box-shadow: 0 7px 0 #fff, inset 0 -5px 0 rgba(255, 255, 255, 0.25), 0 25px 25px #ffc7a696; }
 
 .education-iefp {
@@ -772,7 +774,7 @@ nav ul > li:hover {
 .education-iefp::before {
   background: linear-gradient(to bottom, #574BCD, #299A9D, #41E975); }
 
-.education-iefp:hover {
+.education-iefp:hover, .education-iefp.animate {
   box-shadow: 0 7px 0 #fff, inset 0 -5px 0 rgba(255, 255, 255, 0.25), 0 25px 25px #41e97689; }
 
 .timeline-card-content {

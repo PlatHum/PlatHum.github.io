@@ -5,7 +5,7 @@ const card_master = document.querySelector('.timeline-card.education-master');
 const card_iefp = document.querySelector('.timeline-card.education-iefp');
 
 function handleTapAnimation(ob) {
-    ob.classList.toggle('animate')
+    ob.classList.toggle('animate');
 }
 svgPath_fst.addEventListener('touchend', function () {
     handleTapAnimation(svgPath_fst);
