@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const slider = document.querySelector('.carousel');
     const arrowLeft = document.querySelector('.arrow-left');
     const arrowRight = document.querySelector('.arrow-right');
@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     arrowLeft.addEventListener('click', goLeft);
     arrowRight.addEventListener('click', goRight);
 
-    slider.addEventListener('touchstart', function(event) {
+    slider.addEventListener('touchstart', function (event) {
         touchStartX = event.touches[0].clientX;
     });
 
-    slider.addEventListener('touchend', function(event) {
+    slider.addEventListener('touchend', function (event) {
         touchEndX = event.changedTouches[0].clientX;
         handleSwipe();
     });
@@ -25,28 +25,28 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentSlide === slides[0].control) {
 
             slides[slides.length - 1].control.checked = true;
-        }else{
+        } else {
             const prevSlide = currentSlide.previousElementSibling || slider.lastElementChild;
             prevSlide.checked = true;
         }
-        currentSlide.checked=false;
+        currentSlide.checked = false;
     }
 
     function goRight() {
         const currentSlide = document.querySelector('input[name="slider"]:checked');
         if (currentSlide === slides[slides.length - 1].control) {
             slides[0].control.checked = true;
-        }else{
+        } else {
             const nextSlide = currentSlide.nextElementSibling || slider.firstElementChild;
             nextSlide.checked = true;
         }
-        currentSlide.checked=false;
+        currentSlide.checked = false;
     }
     function handleSwipe() {
         const swipeDistance = touchEndX - touchStartX;
 
         if (Math.abs(swipeDistance) >= swipeThreshold) {
-            const numSlidesToSwipe = Math.min(Math.floor(Math.abs(swipeDistance) / swipeThreshold),maxSlidesToSwipe);
+            const numSlidesToSwipe = Math.min(Math.floor(Math.abs(swipeDistance) / swipeThreshold), maxSlidesToSwipe);
             const direction = swipeDistance < 0 ? 'next' : 'prev';
 
             for (let i = 0; i < numSlidesToSwipe; i++) {
