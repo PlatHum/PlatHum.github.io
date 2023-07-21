@@ -1,16 +1,16 @@
 /*START HOME SECTION STYLES*/
-.home-div{
+.home-div {
   width: 100%;
   max-height: 100vh;
-  display:grid;
-  grid-template-columns: 0.75fr 1fr 1fr minmax(60px,400px);
-  grid-template-rows: 2.5fr minmax(60px,400px);
+  display: grid;
+  grid-template-columns: 0.75fr 1fr 1fr minmax(60px, 400px);
+  grid-template-rows: 2.5fr minmax(60px, 400px);
 
   font-size: var(--step-3);
 
 }
 
-.home-socials{
+.home-socials {
 
   margin-left: 15%;
   margin-right: 15%;
@@ -27,11 +27,11 @@
 
 
 /*TO REMOVE*/
-.home-robot{
-  height:0;
-  width:70%;
-  padding-bottom:70%;
-  background-color:rgba(0, 85, 255, 0);
+.home-robot {
+  height: 0;
+  width: 70%;
+  padding-bottom: 70%;
+  background-color: rgba(0, 85, 255, 0);
   z-index: -1;
   grid-row-start: 1;
   grid-row-end: 3;
@@ -40,9 +40,10 @@
   align-self: center;
   justify-self: center;
 }
+
 /*  */
 
-.home-text{
+.home-text {
   line-height: 7rem;
   letter-spacing: -0.05em;
   grid-row-start: 1;
@@ -50,33 +51,35 @@
   grid-column-start: 2;
   grid-column-end: 5;
   align-self: center;
-  display:grid;
+  display: grid;
   grid-template-rows: 4fr 2fr 2fr;
   height: 100%;
 }
 
-.home-text-greeting{
+.home-text-greeting {
   font-size: var(--step-6);
   font-weight: 800;
   line-height: 1.1;
-  align-self:last baseline
+  align-self: last baseline
 }
 
-.home-text-motto{
+.home-text-motto {
   font-size: var(--step-4);
   font-weight: 700;
   line-height: 1.2;
   justify-self: end;
 }
 
-.home-bottom-text{
+.home-bottom-text {
   font-size: var(--step-2);
   font-weight: 500;
   line-height: 1.3;
   text-align: justify;
-  @supports (text-justify:inter-word){
-    text-justify:inter-word
+
+  @supports (text-justify:inter-word) {
+    text-justify: inter-word
   }
+
   letter-spacing: -0.02em;
   padding-inline: 10%;
 
@@ -85,28 +88,31 @@
 
 
 /*SOCIAL SVGs*/
-.github-svg{
+.github-svg {
   background-image: url(../assets/svg/github-142-svgrepo-com.svg);
-  background-position: center; 
-  background-size: contain; 
+  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
   padding: 1.3rem;
-  
+
 }
-.linkedin-svg{
+
+.linkedin-svg {
   background-image: url(../assets/svg/linkedin-svgrepo-com.svg);
-  background-position: center; 
-  background-size: contain; 
+  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
   padding: 1.5rem;
 }
+
 /* DOWN SVG */
-.home-div .down-svg{
+.home-div .down-svg {
   grid-row: 2 / 3;
   grid-column: 1 / 5;
   justify-self: center;
   align-self: last baseline;
 }
+
 /*END HOME SECTION STYLES*/

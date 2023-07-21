@@ -1,9 +1,14 @@
-.stars, .twinkling, .clouds {
-	position:absolute;
-	display:block;
-	top:0; bottom:0;
-	left:0; right:0;
-	width:100%; height:100%;
+.stars,
+.twinkling,
+.clouds {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .stars {
@@ -11,24 +16,34 @@
 	background: #000 url('../assets/png/stars.png') repeat top center;
 }
 
-.twinkling{
+.twinkling {
 	z-index: -3;
-	background:transparent url('../assets/png/twinkling.png') repeat top center;
+	background: transparent url('../assets/png/twinkling.png') repeat top center;
 	animation: move-twink-back 200s linear infinite;
 }
 
-.clouds{
+.clouds {
 	z-index: -2;
-    background:transparent url('../assets/png/clouds.png') repeat top center;
+	background: transparent url('../assets/png/clouds.png') repeat top center;
 	animation: move-clouds-back 200s linear infinite;
 }
 
 @keyframes move-twink-back {
-	from {background-position:0 0;}
-	to {background-position:-10000px 5000px;}
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -10000px 5000px;
+	}
 }
 
 @keyframes move-clouds-back {
-	from {background-position:0 0;}
-	to {background-position:10000px 0;}
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 10000px 0;
+	}
 }

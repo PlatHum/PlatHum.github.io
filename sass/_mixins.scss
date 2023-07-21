@@ -35,7 +35,7 @@
     @media (min-width:600px) and (max-width:899px) { @content; }
   }
 
-  @mixin reset-button-style{
+    @mixin reset-button-style {
       background: none;
       color: inherit;
       border: none;
@@ -43,44 +43,51 @@
       font: inherit;
       cursor: pointer;
       outline: inherit;
-  }
-
-  @mixin blurry-background{
+    }
+  
+  @mixin blurry-background {
     background: hsl(0, 0%, 0% / 0.5);
-    @supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)){
+
+    @supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)) {
       background: hsla(0, 0%, 100%, 0.1);
       backdrop-filter: blur(1rem);
       -webkit-backdrop-filter: blur(1rem);
     }
   }
-  @mixin border-box{
+
+  @mixin border-box {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 
-  @mixin v-align{ 
-    top: 50%;  
+  @mixin v-align {
+    top: 50%;
     transform: translateY(-50%);
-    -ms-transform:translateY(-50%); /* IE */
-    -moz-transform:translateY(-50%); /* Firefox */
-    -webkit-transform:translateY(-50%); /* Safari and Chrome */
-    -o-transform:translateY(-50%);
-}
+    -ms-transform: translateY(-50%);
+    /* IE */
+    -moz-transform: translateY(-50%);
+    /* Firefox */
+    -webkit-transform: translateY(-50%);
+    /* Safari and Chrome */
+    -o-transform: translateY(-50%);
+  }
 
-@mixin timeline-card-logo($bigpadding : 3rem,$mediumpadding : 2.4rem,$smallpadding : 1.2rem){
-    
+  @mixin timeline-card-logo($bigpadding : 3rem, $mediumpadding : 2.4rem, $smallpadding : 1.2rem) {
+
     position: relative;
     z-index: 2;
-    background-position: center; 
-    background-size:contain; 
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
     background-origin: border-box;
-    padding:$bigpadding;
-    @include for-tablet-landscape-down(){
+    padding: $bigpadding;
+
+    @include for-tablet-landscape-down() {
       padding: $mediumpadding;
     }
-    @include for-phone-only(){
+
+    @include for-phone-only() {
       padding: $smallpadding;
     }
-}
+  }

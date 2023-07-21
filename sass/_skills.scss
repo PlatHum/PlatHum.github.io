@@ -1,74 +1,83 @@
 /*START SKILLS SECTION STYLES*/
 
-.skills-programming-text{
-    grid-area: one;
-    font-size: var(--step-2);
-    letter-spacing: -0.1rem;
-    justify-self: center;
-  }
-  .skills-programming-icons{
-    grid-area: two;
-    justify-self: center;
-    background-color: rgba(0, 85, 255, 0.284);
-    padding-bottom: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-  .skills-simulation-text{
-    grid-area: three;
-    font-size: var(--step-2);
-    letter-spacing: -0.1rem;
-    justify-self: center;
-  }
-  .skills-simulation-icons{
-    grid-area: four;
-    justify-self: center;
-    background-color: rgba(0, 85, 255, 0.284);
-    padding-bottom: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-  .skills-modeling-text{
-    grid-area: five;
-    font-size: var(--step-2);
-    letter-spacing: -0.1rem;
-    justify-self: center;
-  }
-  .skills-modeling-icons{
-    grid-area: six;
-    justify-self: center;
-    background-color: rgba(0, 85, 255, 0.284);
-    padding-bottom: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-  .skills-other-text{
-    grid-area: seven;
-    font-size: var(--step-2);
-    letter-spacing: -0.1rem;
-    justify-self: center;
-  }
-  .skills-other-icons{
-    grid-area: eight;
-    justify-self: center;
-    background-color: rgba(0, 85, 255, 0.284);
-    padding-bottom: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-  .skills-planet{
-    grid-area: nine;
-    justify-self: center;
-    
-  }
-  .skills-div{
-    display: grid;
-    row-gap: 1rem;
-    grid-template-areas: 
+.skills-programming-text {
+  grid-area: one;
+  font-size: var(--step-2);
+  letter-spacing: -0.1rem;
+  justify-self: center;
+}
+
+.skills-programming-icons {
+  grid-area: two;
+  justify-self: center;
+  background-color: rgba(0, 85, 255, 0.284);
+  padding-bottom: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.skills-simulation-text {
+  grid-area: three;
+  font-size: var(--step-2);
+  letter-spacing: -0.1rem;
+  justify-self: center;
+}
+
+.skills-simulation-icons {
+  grid-area: four;
+  justify-self: center;
+  background-color: rgba(0, 85, 255, 0.284);
+  padding-bottom: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.skills-modeling-text {
+  grid-area: five;
+  font-size: var(--step-2);
+  letter-spacing: -0.1rem;
+  justify-self: center;
+}
+
+.skills-modeling-icons {
+  grid-area: six;
+  justify-self: center;
+  background-color: rgba(0, 85, 255, 0.284);
+  padding-bottom: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.skills-other-text {
+  grid-area: seven;
+  font-size: var(--step-2);
+  letter-spacing: -0.1rem;
+  justify-self: center;
+}
+
+.skills-other-icons {
+  grid-area: eight;
+  justify-self: center;
+  background-color: rgba(0, 85, 255, 0.284);
+  padding-bottom: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.skills-planet {
+  grid-area: nine;
+  justify-self: center;
+
+}
+
+.skills-div {
+  display: grid;
+  row-gap: 1rem;
+  grid-template-areas:
     'one nine'
     'two nine'
     'three nine'
@@ -77,26 +86,28 @@
     'six nine'
     'seven nine'
     'eight nine';
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    align-items: center;
-    justify-items: left;
-    font-weight: 500;
-    font-size: var(--step-0);
-    height: 100%;
-  }
-  
-  .skills-planet{
-    height:0;
-    width:80%;
-    padding-bottom:80%;
-    background-color:rgba(0, 85, 255, 0.284);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-items: left;
+  font-weight: 500;
+  font-size: var(--step-0);
+  height: 100%;
+}
 
-  }
-  .skills-div .down-svg{
-    grid-row: 8 / 9;
-    grid-column: 1 / 3;
-    justify-self: center;
-    align-self: last baseline;
-  }
-  /*END SKILLS SECTION STYLES*/
+.skills-planet {
+  height: 0;
+  width: 80%;
+  padding-bottom: 80%;
+  background-color: rgba(0, 85, 255, 0.284);
+
+}
+
+.skills-div .down-svg {
+  grid-row: 8 / 9;
+  grid-column: 1 / 3;
+  justify-self: center;
+  align-self: last baseline;
+}
+
+/*END SKILLS SECTION STYLES*/

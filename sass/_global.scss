@@ -1,46 +1,48 @@
 /* START GLOBAL STYLES*/
 body {
-    font-family: 'JetbrainsMono',monospace, helvetica, arial, sans;
-    /* background-color: #174ea6; */
-    color:snow;
-    overflow-x: hidden;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    position: relative;
-   }
+     font-family: 'JetbrainsMono', monospace, helvetica, arial, sans;
+     /* background-color: #174ea6; */
+     color: snow;
+     overflow-x: hidden;
+     flex-grow: 1;
+     display: flex;
+     flex-direction: column;
+     min-width: 300px;
+     position: relative;
+}
 
 /* section{
      min-width: 300px;
 } */
-   
+
 html {
      scroll-behavior: smooth;
      scroll-padding-top: var(--scroll-padding, 250px);
-/*      min-height: 500%; */
+     /*      min-height: 500%; */
      max-width: 1920px;
      display: flex;
      flex-direction: column;
 }
- a,  
- a:visited {
-     color:snow;
+
+a,
+a:visited {
+     color: snow;
      font-weight: 500;
 }
-a:hover{
+
+a:hover {
      font-weight: 700;
 }
 
-.content{
+.content {
      display: grid;
-     grid-template-rows:max-content max-content max-content 200px;
-     grid-template-columns: clamp(13px,2.5vw, 60px) clamp(13px,3.5vw, 100px) 1fr clamp(13px,3.5vw, 100px) clamp(13px,2vw, 60px);
+     grid-template-rows: max-content max-content max-content 200px;
+     grid-template-columns: clamp(13px, 2.5vw, 60px) clamp(13px, 3.5vw, 100px) 1fr clamp(13px, 3.5vw, 100px) clamp(13px, 2vw, 60px);
      flex: 1;
-     row-gap: min(15vh,250px);
+     row-gap: min(15vh, 250px);
 }
 
-.section-title{
+.section-title {
      font-size: var(--step-3);
      text-transform: uppercase;
      letter-spacing: -0.05em;
@@ -48,7 +50,7 @@ a:hover{
      font-weight: 700;
 }
 
-.sub-section-title{
+.sub-section-title {
      font-size: var(--step-2);
      text-transform: uppercase;
      letter-spacing: -0.02em;
@@ -57,71 +59,77 @@ a:hover{
      font-weight: 600;
 }
 
-#Home{
-     
+#Home {
+
      grid-row: 1 / 2;
      grid-column: 3 / 4;
 }
-#About{
+
+#About {
      grid-row: 2 / 3;
      grid-column: 2 / 5;
      display: grid;
-     grid-template-columns: clamp(12px,3.5vw, 100px) 1fr clamp(12px,3.5vw, 100px);
+     grid-template-columns: clamp(12px, 3.5vw, 100px) 1fr clamp(12px, 3.5vw, 100px);
      grid-template-rows: clamp(50px, 7vh, 90px) max-content max-content;
-     
+
 }
 
-#About>.section-title{
+#About>.section-title {
      grid-row: 1 / 2;
      grid-column: 2 / 3;
 }
-#Skills{
+
+#Skills {
      grid-row: 2 / 3;
      grid-column: 2 / 3;
      display: grid;
      grid-template-rows: clamp(75px, 11vh, 140px) max-content;
 }
-#Skills .sub-section-title{
+
+#Skills .sub-section-title {
      grid-row: 1 / 2;
      grid-column: 1 / 2;
 }
 
-#Education{
+#Education {
      grid-row: 3 / 4;
      grid-column: 2 / 3;
      display: grid;
      grid-template-rows: clamp(75px, 11vh, 140px) max-content;
 }
 
-#Education .sub-section-title{
+#Education .sub-section-title {
      grid-row: 1 / 2;
      grid-column: 1 / 2;
 }
 
-#Experience{
-     
+#Experience {
+
      grid-row: 3 / 4;
      grid-column: 2 / 5;
      display: grid;
-     grid-template-columns: clamp(12px,3.5vw, 100px) 1fr clamp(12px,3.5vw, 100px);
+     grid-template-columns: clamp(12px, 3.5vw, 100px) 1fr clamp(12px, 3.5vw, 100px);
      grid-template-rows: clamp(50px, 7vh, 90px) max-content max-content;
 }
-#Experience>.section-title{
+
+#Experience>.section-title {
      grid-row: 1 / 2;
      grid-column: 2 / 3;
 }
-#Work{
+
+#Work {
      grid-row: 2 / 3;
      grid-column: 2 / 3;
      display: grid;
      grid-template-rows: clamp(75px, 11vh, 140px) max-content;
 }
-#Work .sub-section-title{
+
+#Work .sub-section-title {
      grid-row: 1 / 2;
      grid-column: 1 / 2;
 }
 
-#Projects{
+#Projects {
 
      grid-row: 3 / 4;
      grid-column: 2 / 3;
@@ -130,22 +138,23 @@ a:hover{
 
 }
 
-#Projects .sub-section-title{
+#Projects .sub-section-title {
      grid-row: 1 / 2;
      grid-column: 1 / 2;
 }
 
-#Contact{
-     
+#Contact {
+
      grid-row: 4 / 5;
      grid-column: 3 / 4;
      display: grid;
-     grid-template-columns: clamp(12px,3.5vw, 100px) 1fr clamp(12px,3.5vw, 100px);
-     grid-template-rows: clamp(50px, 7vh, 90px)  max-content;
+     grid-template-columns: clamp(12px, 3.5vw, 100px) 1fr clamp(12px, 3.5vw, 100px);
+     grid-template-rows: clamp(50px, 7vh, 90px) max-content;
 }
-#Contact>.section-title{
+
+#Contact>.section-title {
      grid-row: 1 / 2;
      grid-column: 2 / 3;
 }
 
-   /* END GLOBAL STYLES*/
+/* END GLOBAL STYLES*/

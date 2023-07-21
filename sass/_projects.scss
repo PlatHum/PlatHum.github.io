@@ -1,18 +1,18 @@
-.projects-div{
+.projects-div {
     display: grid;
-    grid-template-rows: minmax(350px,800px) 50px;
+    grid-template-rows: minmax(350px, 800px) 50px;
     grid-template-columns: 1fr;
     row-gap: 30%;
 }
 
-.projects-div .down-svg{
+.projects-div .down-svg {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     justify-self: center;
     align-self: last baseline;
-  }
+}
 
-.carousel-container{
+.carousel-container {
     position: relative;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -27,6 +27,7 @@
 
     display: none;
 }
+
 .carousel {
     position: relative;
     width: 100%;
@@ -49,7 +50,7 @@
     cursor: pointer;
     opacity: 0.5;
     transition: opacity 0.3s ease;
-    
+
 }
 
 .arrow:hover {
@@ -58,7 +59,8 @@
 
 .arrow-left {
     left: -25%;
-    @include for-tablet-portrait-down{
+
+    @include for-tablet-portrait-down {
         left: 0;
     }
 }
@@ -66,20 +68,20 @@
 .arrow-right {
     right: -25%;
 
-    @include for-tablet-portrait-down{
+    @include for-tablet-portrait-down {
         right: 0;
     }
 }
 
-.arrow-right svg{
+.arrow-right svg {
     transform: rotate(180deg);
 }
 
 .cards {
     box-sizing: border-box;
     position: relative;
-    height: clamp(300px,40vmin,500px);
-    width: clamp(310px,34.4vw,430px);
+    height: clamp(300px, 40vmin, 500px);
+    width: clamp(310px, 34.4vw, 430px);
     margin-bottom: 20px;
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -88,7 +90,7 @@
 .cards label {
     box-sizing: border-box;
     position: absolute;
-    width: clamp(310px,34.4vw,430px);
+    width: clamp(310px, 34.4vw, 430px);
     left: 0;
     right: 0;
     margin: auto;
@@ -96,7 +98,7 @@
     transition: transform 0.55s ease;
 }
 
-.cards .card{
+.cards .card {
 
     position: relative;
     height: 100%;
@@ -105,13 +107,13 @@
     padding: 30px 35px;
 }
 
-.card .image{
+.card .image {
 
     display: flex;
     justify-content: space-around;
 }
 
-.card .image img{
+.card .image img {
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
@@ -121,13 +123,13 @@
     object-fit: cover;
 }
 
-.projects-coding{
+.projects-coding {
     box-sizing: border-box;
     margin-top: 8%;
     margin-bottom: 8%;
 }
 
-.projects-coding div{
+.projects-coding div {
     box-sizing: border-box;
     height: 2rem;
     width: 2rem;
@@ -135,19 +137,21 @@
     margin: 10px;
 }
 
-.cpp-logo{
+.cpp-logo {
     background-image: url(../assets/png/ISO_C++_Logo.svg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.python-logo{
+
+.python-logo {
     background-image: url(../assets/png/Python-logo-notext.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.microros-logo{
+
+.microros-logo {
     background-image: url(../assets/png/microros_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -160,7 +164,8 @@
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.ros-logo{
+
+.ros-logo {
     background-image: url(../assets/png/Ros_logo.svg.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -173,13 +178,15 @@
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.matlab-logo{
+
+.matlab-logo {
     background-image: url(../assets/svg/icons8-matlab-64.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.simulink-logo{
+
+.simulink-logo {
     background-image: url(../assets/png/Simulink_Logo.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -192,7 +199,8 @@
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.sbc-logo{
+
+.sbc-logo {
     background-image: url(../assets/svg/logo_sbc.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -205,38 +213,41 @@
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.javascript-logo{
+
+.javascript-logo {
     background-image: url(../assets/png/Unofficial_JavaScript_logo_2.svg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.html-logo{
+
+.html-logo {
     background-image: url(../assets/png/HTML5_logo_and_wordmark.svg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.css-logo{
+
+.css-logo {
     background-image: url(../assets/png/CSS3_logo_and_wordmark.svg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
-.card .infos{
+.card .infos {
 
     display: block;
     text-align: end;
     padding-top: 60px;
 }
 
-.infos span{
+.infos span {
 
     display: block;
 }
 
-.infos .name{
+.infos .name {
     box-sizing: border-box;
     font-size: 30px;
     color: var(--current-color1);
@@ -246,14 +257,14 @@
     transition: all .6s ease;
 }
 
-.infos .lorem{
+.infos .lorem {
 
     font-size: 15.5px;
     color: #ECEAED;
     letter-spacing: 3px;
 }
 
-.card .socials{
+.card .socials {
 
     display: flex;
     justify-content: space-around;
@@ -261,12 +272,12 @@
     padding-top: 10%;
 }
 
-.socials div{
+.socials div {
     font-size: 25px;
     transition: all .7s ease;
 }
 
-.website-icon{
+.website-icon {
 
     -webkit-mask: url(../assets/svg/website-svgrepo-com.svg) no-repeat 100% 100%;
     mask: url(../assets/svg/website-svgrepo-com.svg) no-repeat 100% 100%;
@@ -275,7 +286,8 @@
     background-color: var(--current-color2);
     padding: 1rem;
 }
-.github-icon{
+
+.github-icon {
 
     -webkit-mask: url(../assets/svg/github-142-svgrepo-com.svg) no-repeat 100% 100%;
     mask: url(../assets/svg/github-142-svgrepo-com.svg) no-repeat 100% 100%;
@@ -284,7 +296,8 @@
     background-color: var(--current-color2);
     padding: 1rem;
 }
-.gitlab-icon{
+
+.gitlab-icon {
     -webkit-mask: url(../assets/svg/gitlab-svgrepo-com.svg) no-repeat 100% 100%;
     mask: url(../assets/svg/gitlab-svgrepo-com.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
@@ -292,7 +305,8 @@
     background-color: var(--current-color2);
     padding: 1rem;
 }
-.library-icon{
+
+.library-icon {
     -webkit-mask: url(../assets/svg/library-svgrepo-com.svg) no-repeat 100% 100%;
     mask: url(../assets/svg/library-svgrepo-com.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
@@ -300,7 +314,8 @@
     background-color: var(--current-color2);
     padding: 1rem;
 }
-.youtube-icon{
+
+.youtube-icon {
     -webkit-mask: url(../assets/svg/youtube-svgrepo-com.svg) no-repeat 100% 100%;
     mask: url(../assets/svg/youtube-svgrepo-com.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
@@ -350,7 +365,8 @@
 #s3:checked~.cards #slide3 a,
 #s4:checked~.cards #slide4 a,
 #s5:checked~.cards #slide5 a {
-    pointer-events: auto; /* Override pointer-events for the links */
+    pointer-events: auto;
+    /* Override pointer-events for the links */
 }
 
 
@@ -375,13 +391,15 @@
     --current-color1: #ECEAED;
     --current-color2: #696c7b;
 }
+
 /* Styles to hide non-checked cards on mobile */
-@include for-tablet-portrait-down{
-    #s1:not(:checked) ~ .cards #slide1,
-    #s2:not(:checked) ~ .cards #slide2,
-    #s3:not(:checked) ~ .cards #slide3,
-    #s4:not(:checked) ~ .cards #slide4,
-    #s5:not(:checked) ~ .cards #slide5 {
-      display: none;
+@include for-tablet-portrait-down {
+
+    #s1:not(:checked)~.cards #slide1,
+    #s2:not(:checked)~.cards #slide2,
+    #s3:not(:checked)~.cards #slide3,
+    #s4:not(:checked)~.cards #slide4,
+    #s5:not(:checked)~.cards #slide5 {
+        display: none;
     }
-  }
+}
