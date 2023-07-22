@@ -1,8 +1,8 @@
 const svgPath_fst = document.querySelector('.work-blob.work-fst svg path');
 const svgPath_ist = document.querySelector('.work-blob.work-ist svg path');
-const card_bachelor = document.querySelector('.timeline-card.education-bachelor');
-const card_master = document.querySelector('.timeline-card.education-master');
-const card_iefp = document.querySelector('.timeline-card.education-iefp');
+const card_bachelor = document.querySelector('.education-bachelor .timeline-card');
+const card_master = document.querySelector('.education-master .timeline-card');
+const card_iefp = document.querySelector('.education-iefp .timeline-card');
 
 function handleTapAnimation(ob) {
   ob.classList.toggle('animate');
