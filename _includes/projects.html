@@ -1,134 +1,19 @@
 <div class="projects-div">
-    <div class="carousel-container">
-        <div class="carousel">
-
-            <input type="radio" name="slider" class="d-none" id="s1" checked>
-            <input type="radio" name="slider" class="d-none" id="s2">
-            <input type="radio" name="slider" class="d-none" id="s3">
-            <input type="radio" name="slider" class="d-none" id="s4">
-            <input type="radio" name="slider" class="d-none" id="s5">
-
-
-            <div class="cards">
-                <label for="s1" id="slide1">
-                    <div class="card">
-                        <div class="image">
-                            <img src="assets/jpeg/temp.jpeg" alt="">
-                            <div class="projects-coding">
-                                <div class="cpp-logo"></div>
-                                <div class="python-logo"></div>
-                                <div class="ros-logo"></div>
-                                <div class="microros-logo"></div>
-                                <div class="matlab-logo"></div>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            <span class="name">TIR-ANT</span>
-                            <span class="lorem">Lorem ipsum dolor sit amet, sit amet adipiscing elit. Aenean vel ansd .
-                                Nullam
-                                lorem. Nulla eu
-                                sodales</span>
-                        </div>
-                        <div class="socials">
-                            <div class="website-icon"></div>
-                            <div class="youtube-icon"></div>
-                            <div class="github-icon"></div>
-                            <div class="library-icon"></div>
-                        </div>
-                    </div>
-                </label>
-
-                <label for="s2" id="slide2">
-                    <div class="card">
-                        <div class="image">
-                            <img src="assets/jpeg/temp.jpeg" alt="">
-                            <div class="projects-coding">
-                                <div class="cpp-logo"></div>
-                                <div class="python-logo"></div>
-                                <div class="ros-logo"></div>
-                                <div class="matlab-logo"></div>
-                                <div class="simulink-logo"></div>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            <span class="name">FST11</span>
-                            <span class="lorem">Lorem ipsum dolor sit, adipiscing elit. Aenean vel sit ansd . Nullam
-                                lorem. Nulla eu
-                                sodales karma stellus</span>
-                        </div>
-                        <div class="socials">
-                            <div class="website-icon"></div>
-                            <div class="gitlab-icon"></div>
-                            <div class="youtube-icon"></div>
-                        </div>
-                    </div>
-                </label>
-
-                <label for="s3" id="slide3">
-                    <div class="card">
-                        <div class="image">
-                            <img src="assets/jpeg/temp.jpeg" alt="">
-                            <div class="projects-coding">
-                                <div class="sbc-logo"></div>
-                                <div class="matlab-logo"></div>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            <span class="name">Industrial Cell Simulator</span>
-                            <span class="lorem">Lorem ipsum dolor, sit amet let kar adipiscing. Aenean vel velit sit
-                                ansd . Nullam
-                                lorem. Nulla karma stellus</span>
-                        </div>
-                        <div class="socials">
-                            <div class="library-icon"></div>
-                        </div>
-                    </div>
-                </label>
-
-                <label for="s4" id="slide4">
-                    <div class="card">
-                        <div class="image">
-                            <img src="assets/jpeg/temp.jpeg" alt="">
-                            <div class="projects-coding">
-                                <div class="matlab-logo"></div>
-                                <div class="simulink-logo"></div>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            <span class="name">Simulating the UR5</span>
-                            <span class="lorem">Lorem ipsum dolor sit, sit amet elit. Aenean sit amet sit amet vel velit
-                                sit ansd. Nulla eu
-                                sodales stellus</span>
-                        </div>
-                        <div class="socials">
-                            <div class="library-icon"></div>
-                        </div>
-                    </div>
-                </label>
-
-                <label for="s5" id="slide5">
-                    <div class="card">
-                        <div class="image">
-                            <img src="assets/jpeg/temp.jpeg" alt="">
-                            <div class="projects-coding">
-                                <div class="javascript-logo"></div>
-                                <div class="html-logo"></div>
-                                <div class="css-logo"></div>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            <span class="name">This Website</span>
-                            <span class="lorem">Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd . Nullam
-                                lorem. Nulla eu
-                                sodales stellus</span>
-                        </div>
-                        <div class="socials">
-                            <div class="website-icon"></div>
-                            <div class="github-icon"></div>
-                        </div>
-                    </div>
-                </label>
-            </div>
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev">
             <div class="arrow arrow-left">
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
@@ -151,6 +36,8 @@
 
                 </svg>
             </div>
+        </div>
+        <div class="swiper-button-next">
             <div class="arrow arrow-right">
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
@@ -174,6 +61,8 @@
                 </svg>
             </div>
         </div>
+    
     </div>
+  
     <a class="down-svg" href="#Contact" alt="Arrow pointing down to next section">&nbsp;</a>
 </div>

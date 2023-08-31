@@ -1,3 +1,32 @@
+:root {
+    --swiper-pagination-bottom:0;
+  }
+
+  .swiper [class^="swiper-button-"]::after{
+    content: "";
+}
+
+.swiper .swiper-pagination-bullet{
+    width: 20px;
+    height: 20px; 
+    background-color: #fff;
+    opacity: 0.3; 
+}
+
+.swiper .swiper-pagination-bullet:hover{
+    width: 22px;
+    height: 22px; 
+    opacity: 0.6; 
+}
+
+.swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    background-color: #8B5DF5; 
+}
+
+
 .projects-div {
     display: grid;
     grid-template-rows: minmax(350px, 800px) 50px;
@@ -10,35 +39,6 @@
     grid-column: 1 / 2;
     justify-self: center;
     align-self: last baseline;
-}
-
-.carousel-container {
-    position: relative;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.carousel-container input {
-
-    display: none;
-}
-
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 600px;
-    max-height: 600px;
-    display: flex;
-    transform-style: preserve-3d;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .arrow {
@@ -77,65 +77,51 @@
     transform: rotate(180deg);
 }
 
-.cards {
-    box-sizing: border-box;
+.carousel-container {
     position: relative;
-    height: clamp(300px, 40vmin, 500px);
-    width: clamp(310px, 34.4vw, 430px);
-    margin-bottom: 20px;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-.cards label {
-    box-sizing: border-box;
-    position: absolute;
-    width: clamp(310px, 34.4vw, 430px);
-    left: 0;
-    right: 0;
-    margin: auto;
-    cursor: pointer;
-    transition: transform 0.55s ease;
-}
-
-.cards .card {
-
-    position: relative;
-    height: 100%;
-    background-color: #323444;
-    border-radius: 10px;
-    padding: 30px 35px;
-}
-
-.card .image {
-
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
-.card .image img {
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
-    margin-top: 23px;
-    width: 86%;
-    height: 220px;
+.swiper{
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-}
+  }
 
-.projects-coding {
-    box-sizing: border-box;
-    margin-top: 8%;
-    margin-bottom: 8%;
-}
+  .swiper-slide {
+    width: 80%;
+  }
 
-.projects-coding div {
-    box-sizing: border-box;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 10%;
-    margin: 10px;
-}
+  .swiper-slide:nth-child(2n) {
+    width: 60%;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 40%;
+  }
+
+
 
 .cpp-logo {
     background-image: url(../assets/png/ISO_C++_Logo.svg.png);
@@ -235,48 +221,6 @@
     background-position: center;
 }
 
-.card .infos {
-
-    display: block;
-    text-align: end;
-    padding-top: 60px;
-}
-
-.infos span {
-
-    display: block;
-}
-
-.infos .name {
-    box-sizing: border-box;
-    font-size: 30px;
-    color: var(--current-color1);
-    letter-spacing: 8px;
-    margin-bottom: 20px;
-    padding-left: 25%;
-    transition: all .6s ease;
-}
-
-.infos .lorem {
-
-    font-size: 15.5px;
-    color: #ECEAED;
-    letter-spacing: 3px;
-}
-
-.card .socials {
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 10%;
-}
-
-.socials div {
-    font-size: 25px;
-    transition: all .7s ease;
-}
-
 .website-icon {
 
     -webkit-mask: url(../assets/svg/website-svgrepo-com.svg) no-repeat 100% 100%;
@@ -322,84 +266,4 @@
     mask-size: cover;
     background-color: var(--current-color2);
     padding: 1rem;
-}
-
-
-
-#s1:checked~.cards #slide4,
-#s2:checked~.cards #slide5,
-#s3:checked~.cards #slide1,
-#s4:checked~.cards #slide2,
-#s5:checked~.cards #slide3 {
-    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(-70%, 0, -220px);
-    --current-color1: #ECEAED;
-    --current-color2: #696c7b;
-}
-
-#s1:checked~.cards #slide5,
-#s2:checked~.cards #slide1,
-#s3:checked~.cards #slide2,
-#s4:checked~.cards #slide3,
-#s5:checked~.cards #slide4 {
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(-35%, 0, -120px);
-    --current-color1: #ECEAED;
-    --current-color2: #696c7b;
-}
-
-#s1:checked~.cards #slide1,
-#s2:checked~.cards #slide2,
-#s3:checked~.cards #slide3,
-#s4:checked~.cards #slide4,
-#s5:checked~.cards #slide5 {
-    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%);
-    transform: translate3d(0, 0, 0);
-    --current-color1: #8B5DF5;
-    --current-color2: #ECEAED;
-    pointer-events: none;
-}
-
-#s1:checked~.cards #slide1 a,
-#s2:checked~.cards #slide2 a,
-#s3:checked~.cards #slide3 a,
-#s4:checked~.cards #slide4 a,
-#s5:checked~.cards #slide5 a {
-    pointer-events: auto;
-    /* Override pointer-events for the links */
-}
-
-
-#s1:checked~.cards #slide2,
-#s2:checked~.cards #slide3,
-#s3:checked~.cards #slide4,
-#s4:checked~.cards #slide5,
-#s5:checked~.cards #slide1 {
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(35%, 0, -120px);
-    --current-color1: #ECEAED;
-    --current-color2: #696c7b;
-}
-
-#s1:checked~.cards #slide3,
-#s2:checked~.cards #slide4,
-#s3:checked~.cards #slide5,
-#s4:checked~.cards #slide1,
-#s5:checked~.cards #slide2 {
-    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(70%, 0, -220px);
-    --current-color1: #ECEAED;
-    --current-color2: #696c7b;
-}
-
-/* Styles to hide non-checked cards on mobile */
-@include for-tablet-portrait-down {
-
-    #s1:not(:checked)~.cards #slide1,
-    #s2:not(:checked)~.cards #slide2,
-    #s3:not(:checked)~.cards #slide3,
-    #s4:not(:checked)~.cards #slide4,
-    #s5:not(:checked)~.cards #slide5 {
-        display: none;
-    }
 }
