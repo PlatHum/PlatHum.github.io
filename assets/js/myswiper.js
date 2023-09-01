@@ -1,28 +1,26 @@
 const swiper = new Swiper('.swiper', {
     init:false,
     speed: 500,
-    spaceBetween:150,
-    // Optional parameters
-    effect: 'coverflow',
-    coverflowEffect: {
-        rotate: 5,
-        stretch: 0,
-        depth: 90,
-        modifier: 1,
+    breakpoints: {
+      // when window width is >= 10px
+      10: {
+        effect: 'slide',
+        slidesPerView: 'auto',
+        spaceBetween: 10,
       },
-      breakpoints: {
-        // when window width is >= 160px
-        160: {
-          spaceBetween: 25
-        },
-        // when window width is >= 640px
-        900: {
-          spaceBetween: 150
-        }
-      },
-    slidesPerView: 2,
-  
-    // If we need pagination
+      // when window width is >= 900px
+      900: {
+        spaceBetween: 100,
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 5,
+            stretch: 0,
+            depth: 90,
+            modifier: 1,
+          },
+          slidesPerView: 'auto',
+      }
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
