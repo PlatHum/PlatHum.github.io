@@ -1,12 +1,24 @@
 const swiper = new Swiper('.swiper', {
     init:false,
     speed: 500,
-    spaceBetween:42,
+    spaceBetween:150,
     // Optional parameters
     effect: 'coverflow',
     coverflowEffect: {
-        rotate: 20,
-        slideShadows: false
+        rotate: 5,
+        stretch: 0,
+        depth: 90,
+        modifier: 1,
+      },
+      breakpoints: {
+        // when window width is >= 160px
+        160: {
+          spaceBetween: 25
+        },
+        // when window width is >= 640px
+        900: {
+          spaceBetween: 150
+        }
       },
     slidesPerView: 2,
   
