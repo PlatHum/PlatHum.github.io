@@ -88,15 +88,24 @@
   /* fix arrows position */
   .swiper-button-next{
     right: 0%!important;
+
   }
   
   .swiper-button-prev{
     left: 0%!important;
 }
 
-.swiper{
+.swiper-container{
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper{
+/*     grid-row: 1 / 2;
+    grid-column: 1 / 2; */
     width: 100%;
     height: 100%;
 /*     max-width: 100%;
