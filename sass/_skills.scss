@@ -85,7 +85,8 @@
     'five nine'
     'six nine'
     'seven nine'
-    'eight nine';
+    'eight nine'
+    'ten ten';
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   align-items: center;
@@ -104,8 +105,7 @@
 }
 
 .skills-div .down-svg {
-  grid-row: 8 / 9;
-  grid-column: 1 / 3;
+  grid-area: ten;
   justify-self: center;
   align-self: last baseline;
 }
