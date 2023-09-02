@@ -7,10 +7,13 @@ const swiper = new Swiper('.swiper', {
         effect: 'slide',
         slidesPerView: 'auto',
         spaceBetween: 10,
+        centeredSlides: true,
+        slidesOffsetBefore:0,
+
       },
       // when window width is >= 900px
       900: {
-        spaceBetween: 100,
+        spaceBetween: 80,
         effect: 'coverflow',
         coverflowEffect: {
             rotate: 5,
@@ -19,6 +22,9 @@ const swiper = new Swiper('.swiper', {
             modifier: 1,
           },
           slidesPerView: 'auto',
+          centeredSlides: false,
+          slidesOffsetBefore:100,
+
       }
     },
     pagination: {
@@ -36,6 +42,7 @@ const swiper = new Swiper('.swiper', {
     },
     grabCursor: true,
     loop:true,
+    slideToClickedSlide: true,
   });
 
   swiper.init();
