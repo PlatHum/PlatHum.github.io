@@ -13,19 +13,19 @@
 
 .stars {
 	z-index: -4;
-	background: #000 url('../assets/png/stars.png') repeat top center;
+	background: #000 url('../assets/png/lightstars.png') repeat top center;
 }
 
 .twinkling {
 	z-index: -3;
 	background: transparent url('../assets/png/twinkling.png') repeat top center;
-	animation: move-twink-back 200s linear infinite;
+	animation: move-twink-back 800s linear infinite;
 }
 
 .clouds {
 	z-index: -2;
-	background: transparent url('../assets/png/clouds.png') repeat top center;
-	animation: move-clouds-back 200s linear infinite;
+	background: transparent url('../assets/png/lightclouds.png') repeat top center;
+	animation: move-clouds-back 400s linear infinite;
 }
 
 @keyframes move-twink-back {
