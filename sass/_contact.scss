@@ -121,6 +121,9 @@
 
 .form-body-submit{
     width: 15%;
+    @include for-phone-only{
+        width:20%;
+    }
     grid-area: submit;
     margin-top: calc(10px / var(--size-divisor));
     font-size: var(--step-1-5);
@@ -128,16 +131,19 @@
     font-weight: 400;
     justify-self: right;
     box-shadow: 10px 10px 8px 10px #070707;
+    transform: translateX(0) translateY(0);
 
 }
 .form-body button{
     -webkit-box-shadow: calc(-0.3rem / var(--size-divisor)) calc(0.3rem / var(--size-divisor)) 0 #bab0d396;
     -moz-box-shadow: calc(-0.3rem / var(--size-divisor)) calc(0.3rem / var(--size-divisor)) 0 #bab0d396;
     box-shadow: calc(-0.3rem / var(--size-divisor)) calc(0.3rem / var(--size-divisor)) 0 #bab0d396;
+    transform: translateX(0) translateY(0);
 }
 
 .form-body-submit:hover{
     background-color: #c9c9c2;
+    transform: translateX(0) translateY(0);
 }
 .form-body-submit:active{
     background: #d6d6d6;
@@ -145,7 +151,6 @@
     -webkit-box-shadow: calc(-0.5rem / var(--size-divisor)) calc(0.5rem / var(--size-divisor)) 0 #bab0d396;
     -moz-box-shadow: calc(-0.5rem / var(--size-divisor)) calc(0.5rem / var(--size-divisor)) 0 #bab0d396;
     box-shadow: calc(-0.5rem / var(--size-divisor)) calc(0.5rem / var(--size-divisor)) 0 #bab0d396;
-    position:unset;
     transform: translateX(0.2rem) translateY(-0.2rem);
 
 }
