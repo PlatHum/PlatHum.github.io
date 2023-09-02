@@ -132,6 +132,7 @@
     justify-self: right;
     box-shadow: 10px 10px 8px 10px #070707;
     transform: translateX(0) translateY(0);
+    color: black;
 
 }
 .form-body button{
@@ -139,6 +140,7 @@
     -moz-box-shadow: calc(-0.3rem / var(--size-divisor)) calc(0.3rem / var(--size-divisor)) 0 #bab0d396;
     box-shadow: calc(-0.3rem / var(--size-divisor)) calc(0.3rem / var(--size-divisor)) 0 #bab0d396;
     transform: translateX(0) translateY(0);
+    color: black;
 }
 
 .form-body-submit:hover{
