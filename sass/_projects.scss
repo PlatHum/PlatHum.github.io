@@ -127,10 +127,10 @@
 
   .project-card{
             /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.08);
         border-radius: 16px;
-        backdrop-filter: blur(5.0px);
-        -webkit-backdrop-filter: blur(5.0px);
+        backdrop-filter: blur(1.0px);
+        -webkit-backdrop-filter: blur(1.0px);
         border: 1px solid rgba(255, 255, 255, 1);
 
         display: grid;
@@ -208,9 +208,16 @@
     mask-size: cover;
     background-color: #fff;
     padding: 1rem;
+    opacity: 0.8;
     @include for-tablet-landscape-down{
         padding: 1.2rem;
+        opacity: 1;
     }
+}
+
+.website-icon:hover{
+
+    opacity: 1;
 }
 
 .github-icon {
@@ -222,9 +229,16 @@
     background-color: #fff;
     padding: 1rem;
     overflow: visible;
+    opacity: 0.8;
     @include for-tablet-landscape-down{
         padding: 1.2rem;
+        opacity: 1;
     }
+}
+
+.github-icon:hover{
+
+    opacity: 1;
 }
 
 .gitlab-icon {
@@ -234,9 +248,15 @@
     mask-size: cover;
     background-color: #fff;
     padding: 1rem;
+    opacity: 0.8;
     @include for-tablet-landscape-down{
         padding: 1.2rem;
+        opacity: 1;
     }
+}
+.gitlab-icon:hover{
+
+    opacity: 1;
 }
 
 .library-icon {
@@ -246,9 +266,15 @@
     mask-size: cover;
     background-color: #fff;
     padding: 1rem;
+    opacity: 0.8;
     @include for-tablet-landscape-down{
         padding: 1.2rem;
+        opacity: 1;
     }
+}
+.library-icon:hover{
+
+    opacity: 1;
 }
 
 .youtube-icon {
@@ -258,7 +284,13 @@
     mask-size: cover;
     background-color: #fff;
     padding: 1rem;
+    opacity: 0.8;
     @include for-tablet-landscape-down{
         padding: 1.2rem;
+        opacity: 1;
     }
+}
+.youtube-icon:hover{
+
+    opacity: 1;
 }
