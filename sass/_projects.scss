@@ -146,7 +146,7 @@
   .project-media{
     grid-area: p_media;
   }
-  .project-media img{
+  .project-media img, .project-media video{
 
     display: block;
     height: min(300px,100%);
