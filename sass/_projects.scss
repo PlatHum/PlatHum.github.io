@@ -1,5 +1,5 @@
 :root {
-    --swiper-pagination-bottom:15%;
+    --swiper-pagination-bottom:6%;
     --swiper-navigation-top-offset:38%;
     @include for-tablet-landscape-down{
         --swiper-pagination-bottom:25%;
@@ -107,8 +107,6 @@
     grid-column: 1 / 2; */
     width: 100%;
     height: 100%;
-/*     max-width: 100%;
-    max-height: 100%; */
     top: 5%;
     overflow: visible;
   }
@@ -116,14 +114,13 @@
 
   .swiper-slide {
     @include for-tablet-landscape-down{
-        width: 75%;
+        width: 80%;
         height: 65%;
     }
-    width: 42%;
-    height: 75%;
+    width: 40%;
+    height: 85%;
     text-align: center;
     font-size: 18px;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -135,107 +132,73 @@
         backdrop-filter: blur(5.0px);
         -webkit-backdrop-filter: blur(5.0px);
         border: 1px solid rgba(255, 255, 255, 1);
+
+        display: grid;
+        grid-template-areas: ". . . " ". p_media ." ". p_title ." ". p_description ." ". p_skills ." ". p_links ." ". . . ";
+        grid-template-columns: 0.05fr 1fr 0.05fr;
+        grid-template-rows: 0.25fr 4fr 1fr 1fr 1fr 1fr 0.25fr;
+        place-items: center;
+        @include for-tablet-landscape-down{
+            grid-template-rows: 0.25fr 4fr 1fr 0.1fr 0.1fr 1fr 0.25fr;
+        }
   }
 
+  .project-media{
+    grid-area: p_media;
+  }
+  .project-media img{
+
+    display: block;
+    height: min(300px,100%);
+    width: min(480px,100%);
+
+    max-height: 320px;
+    max-width: 500px;
 
 
-.cpp-logo {
-    background-image: url(../assets/png/ISO_C++_Logo.svg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+    object-fit: contain;
+    object-position: bottom;
+    
 
-.python-logo {
-    background-image: url(../assets/png/Python-logo-notext.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
+  }
+  .project-skills{
+    grid-area: p_skills;
+    font-weight: 400;
+    font-size: var(--step--0-5);
+    @include for-tablet-landscape-down{
+        display: none;
+    }
+  }
+  .project-description{
+    grid-area: p_description;
+    font-weight: 500;
+    font-size: var(--step-0-5);
+    @include for-tablet-landscape-down{
+        display: none;
+    }
 
-.microros-logo {
-    background-image: url(../assets/png/microros_logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    /* From https://css.glass */
-    background-color: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.ros-logo {
-    background-image: url(../assets/png/Ros_logo.svg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    /* From https://css.glass */
-    background-color: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.matlab-logo {
-    background-image: url(../assets/svg/icons8-matlab-64.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.simulink-logo {
-    background-image: url(../assets/png/Simulink_Logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    /* From https://css.glass */
-    background-color: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.sbc-logo {
-    background-image: url(../assets/svg/logo_sbc.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    /* From https://css.glass */
-    background-color: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.javascript-logo {
-    background-image: url(../assets/png/Unofficial_JavaScript_logo_2.svg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.html-logo {
-    background-image: url(../assets/png/HTML5_logo_and_wordmark.svg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.css-logo {
-    background-image: url(../assets/png/CSS3_logo_and_wordmark.svg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
+  }
+  .project-links{
+    grid-area: p_links;
+    font-weight: 500;
+    font-size: var(--step-0-5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+  }
+  .project-title{
+    grid-area: p_title;
+    font-weight: 700;
+    font-size: var(--step-2);
+    @include for-tablet-landscape-down{
+        font-size: var(--step-2-5);
+    }
+  }
 
 .website-icon {
 
@@ -243,8 +206,11 @@
     mask: url(../assets/svg/website-svgrepo-com.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: var(--current-color2);
+    background-color: #fff;
     padding: 1rem;
+    @include for-tablet-landscape-down{
+        padding: 1.2rem;
+    }
 }
 
 .github-icon {
@@ -253,8 +219,12 @@
     mask: url(../assets/svg/github-142-svgrepo-com.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: var(--current-color2);
+    background-color: #fff;
     padding: 1rem;
+    overflow: visible;
+    @include for-tablet-landscape-down{
+        padding: 1.2rem;
+    }
 }
 
 .gitlab-icon {
@@ -262,8 +232,11 @@
     mask: url(../assets/svg/gitlab-svgrepo-com.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: var(--current-color2);
+    background-color: #fff;
     padding: 1rem;
+    @include for-tablet-landscape-down{
+        padding: 1.2rem;
+    }
 }
 
 .library-icon {
@@ -271,8 +244,11 @@
     mask: url(../assets/svg/library-svgrepo-com.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: var(--current-color2);
+    background-color: #fff;
     padding: 1rem;
+    @include for-tablet-landscape-down{
+        padding: 1.2rem;
+    }
 }
 
 .youtube-icon {
@@ -280,6 +256,9 @@
     mask: url(../assets/svg/youtube-svgrepo-com.svg) no-repeat 100% 100%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: var(--current-color2);
+    background-color: #fff;
     padding: 1rem;
+    @include for-tablet-landscape-down{
+        padding: 1.2rem;
+    }
 }

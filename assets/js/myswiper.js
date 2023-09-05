@@ -14,16 +14,16 @@ const swiper = new Swiper('.swiper', {
       // when window width is >= 900px
       900: {
         spaceBetween: 80,
-        effect: 'coverflow',
-        coverflowEffect: {
+        effect: 'slide',
+/*         coverflowEffect: {
             rotate: 5,
             stretch: 0,
             depth: 90,
             modifier: 1,
-          },
+          }, */
           slidesPerView: 'auto',
           centeredSlides: false,
-          slidesOffsetBefore:100,
+          slidesOffsetBefore:80,
 
       }
     },
@@ -41,8 +41,7 @@ const swiper = new Swiper('.swiper', {
         enabled: true,
     },
     grabCursor: true,
-    loop:true,
-    slideToClickedSlide: true,
+    loop:false
   });
 
   swiper.init();
