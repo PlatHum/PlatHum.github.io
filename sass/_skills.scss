@@ -1,79 +1,5 @@
 /*START SKILLS SECTION STYLES*/
 
-.skills-programming-text {
-  grid-area: one;
-  font-size: var(--step-2);
-  letter-spacing: -0.1rem;
-  justify-self: center;
-}
-
-.skills-programming-icons {
-  grid-area: two;
-  justify-self: center;
-  background-color: rgba(0, 85, 255, 0.284);
-  padding-bottom: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
-.skills-simulation-text {
-  grid-area: three;
-  font-size: var(--step-2);
-  letter-spacing: -0.1rem;
-  justify-self: center;
-}
-
-.skills-simulation-icons {
-  grid-area: four;
-  justify-self: center;
-  background-color: rgba(0, 85, 255, 0.284);
-  padding-bottom: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
-.skills-modeling-text {
-  grid-area: five;
-  font-size: var(--step-2);
-  letter-spacing: -0.1rem;
-  justify-self: center;
-}
-
-.skills-modeling-icons {
-  grid-area: six;
-  justify-self: center;
-  background-color: rgba(0, 85, 255, 0.284);
-  padding-bottom: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
-.skills-other-text {
-  grid-area: seven;
-  font-size: var(--step-2);
-  letter-spacing: -0.1rem;
-  justify-self: center;
-}
-
-.skills-other-icons {
-  grid-area: eight;
-  justify-self: center;
-  background-color: rgba(0, 85, 255, 0.284);
-  padding-bottom: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
-.skills-planet {
-  grid-area: nine;
-  justify-self: center;
-
-}
-
 .skills-div {
   display: grid;
   row-gap: 1rem;
@@ -87,7 +13,10 @@
     'seven nine'
     'eight nine'
     'ten ten';
-  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  @include for-tablet-landscape-down{
+    grid-template-columns: 1fr 0.01fr;
+  }
   grid-auto-rows: 1fr;
   align-items: center;
   justify-items: left;
@@ -96,10 +25,98 @@
   height: 100%;
 }
 
+.skills-programming-text {
+  grid-area: one;
+  font-size: var(--step-2);
+  letter-spacing: -0.1rem;
+  justify-self: center;
+}
+
+.skills-programming-icons {
+  grid-area: two;
+  justify-self: center;
+  /* background-color: rgba(0, 85, 255, 0.284); */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-areas: "cpp python html_css js";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#cpp_canvas, #python_canvas,#html_css_canvas,#js_canvas,#gazebo_canvas,#isaac_canvas,#solidworks_canvas,#blender_canvas,#ros_canvas,#microros_canvas {
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#cpp_canvas{grid-area: cpp;} #python_canvas{grid-area: python;}#html_css_canvas{grid-area: html_css;}#js_canvas{grid-area: js;}
+#gazebo_canvas{grid-area: gazebo;} #isaac_canvas{grid-area: isaac;}#solidworks_canvas{grid-area: solidworks;}#blender_canvas{grid-area: blender;}
+#ros_canvas{grid-area: ros;} #microros_canvas{grid-area: microros;}
+
+.skills-simulation-text {
+  grid-area: three;
+  font-size: var(--step-2);
+  letter-spacing: -0.1rem;
+  justify-self: center;
+}
+
+.skills-simulation-icons {
+  grid-area: four;
+  justify-self: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-areas: ". gazebo isaac .";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.skills-modeling-text {
+  grid-area: five;
+  font-size: var(--step-2);
+  letter-spacing: -0.1rem;
+  justify-self: center;
+}
+
+.skills-modeling-icons {
+  grid-area: six;
+  justify-self: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-areas: ". solidworks blender .";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.skills-other-text {
+  grid-area: seven;
+  font-size: var(--step-2);
+  letter-spacing: -0.1rem;
+  justify-self: center;
+}
+
+.skills-other-icons {
+  grid-area: eight;
+  justify-self: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-areas: ". ros microros .";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .skills-planet {
-  height: 0;
-  width: 80%;
-  padding-bottom: 80%;
+  grid-area: nine;
+  justify-self: center;
+  height: 100%;
+  width:100%;
+  @include for-tablet-landscape-down{
+    display: none;
+  }
   background-color: rgba(0, 85, 255, 0.284);
 
 }
