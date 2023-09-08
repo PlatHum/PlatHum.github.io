@@ -84,25 +84,17 @@ class skillElement {
   }
 
   newMesh(url="assets/png/DefaultSquareTexture.png") {
+    
     this.mesh.material.dispose();
-    this.mesh.geometry.dispose();
-    this.scene.remove(this.mesh);
-    this.texture_url=url;
-    let geometry = new THREE.BoxGeometry(
-      this.geometry_side,
-      this.geometry_side,
-      this.geometry_side
-    );
 
+    this.texture_url=url;
     let texture = this.texture_loader.load(this.texture_url);
 
     texture.anisotropy = this.renderer.capabilities.getMaxAnisotropy() / 2;
     texture.colorSpace = THREE.SRGBColorSpace;
 
-    let material= new THREE.MeshBasicMaterial({ map: texture});
-    this.mesh = new THREE.Mesh(geometry, material);
-    this.mesh.rotateZ(this.initial_rotation);
-    this.scene.add(this.mesh);
+    this.mesh.material= new THREE.MeshBasicMaterial({ map: texture});
+
   }
 
   animate() {
