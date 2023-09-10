@@ -21,9 +21,10 @@ I think these are all the *inspos*. Of course, thank you **StackOverflow**, I st
 
 The rest of the website's vibe and functionality came purely from my head. I am particularly proud of the Skills section. The word-cloud that can be randomized through a button and the spinnable 3D cube that can be textured with any skill you click on was pretty fun to make. It most certainly is the least efficient thing I ever programmed. But it looks and feels cool.
 
-## Future Features Ideas
-
-- A pop-up button on the side that asks you if you want to download my resume.
+## Future Feature Ideas
+- Custom Error 404 page;
+- Loading page for better mobile performance;
+- A pop-up button on the side that asks you if you want to download my resume;
 - I intend to model and rig a robotic arm in Blender. Then add it to the landing section of the website, behind the text. I'll use inverse kinematics and the ThreeJS library to make it look like it is trying to follow and grab the user's cursor. Let's hope I have the time...
 
 ## Problems with the website
