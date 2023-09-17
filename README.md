@@ -1,8 +1,8 @@
 # Resume Website
 
-It's about time I start applying to jobs and I thought that a website version of my resume would be a good project to include in my resume. Here it is.
+It's about time I start applying to jobs and I thought that a website version of my resume would be a good project to include ...*in my resume*...
 
-This website is a Frankenstein of several ideas and CodePens I gathered throughout the internet and my personal twist. Yes I had some original ideas, I'm not just some code thief.
+This website is a *Frankenstein* of several ideas and CodePens I gathered throughout the internet and my personal twist. Yes I had some original ideas, I'm not just some code thief.
 
 I've also shed some tears making it (as best as I can tell) responsive and compatible with all browsers that matter (sorry IE). It should work on most screen sizes and be touch-friendly.
 
