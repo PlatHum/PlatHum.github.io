@@ -83,8 +83,9 @@
   letter-spacing: -0.02em;
   padding-inline: 15%;
   @include for-tablet-landscape-down{
-    text-align: justify;
-    padding-inline: 10%;
+    text-justify: auto;
+    padding-left: 7%;
+    padding-right: 5%;
   }
 
 }
