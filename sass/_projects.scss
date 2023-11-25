@@ -36,7 +36,7 @@
 .projects-div {
     display: grid;
     grid-template-rows: minmax(350px, 650px) max-content;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(100px,99%);
     align-items: center;
     justify-items: center;
 }
