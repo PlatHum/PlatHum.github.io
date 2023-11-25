@@ -74,14 +74,18 @@
   font-size: var(--step-2);
   font-weight: 500;
   line-height: 1.3;
-  text-align: justify;
+  text-align: center;
 
   @supports (text-justify:inter-word) {
     text-justify: inter-word
   }
 
   letter-spacing: -0.02em;
-  padding-inline: 10%;
+  padding-inline: 15%;
+  @include for-tablet-landscape-down{
+    text-align: justify;
+    padding-inline: 10%;
+  }
 
 }
 
