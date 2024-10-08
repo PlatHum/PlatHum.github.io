@@ -42,6 +42,9 @@
     @include for-tablet-landscape-down{
         grid-template-areas: "github github github" "linkedin linkedin linkedin" "mail mail mail";
     }
+    @include for-desktop-only{
+        margin-right: 2vw;
+    }
 }
 
 .contact-div .contact-socials .email-contact{
