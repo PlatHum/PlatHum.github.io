@@ -36,12 +36,12 @@
     font-size: var(--step-1);
     align-self: center;
     grid-template-areas: "mail mail mail" "linkedin linkedin linkedin" "github github github";
-    @include for-tablet-landscape-down{
-        grid-template-areas: "github github github" "linkedin linkedin linkedin" "mail mail mail";
-    }
     grid-auto-rows: auto;
     justify-items: center;
     align-items: center;
+    @include for-tablet-landscape-down{
+        grid-template-areas: "github github github" "linkedin linkedin linkedin" "mail mail mail";
+    }
 }
 
 .contact-div .contact-socials .email-contact{
@@ -121,9 +121,6 @@
 
 .form-body-submit{
     width: 15%;
-    @include for-phone-only{
-        width:20%;
-    }
     grid-area: submit;
     margin-top: calc(10px / var(--size-divisor));
     font-size: var(--step-1-5);
@@ -133,6 +130,9 @@
     box-shadow: 10px 10px 8px 10px #070707;
     transform: translateX(0) translateY(0);
     color: black;
+    @include for-phone-only{
+        width:20%;
+    }
 
 }
 .form-body button{

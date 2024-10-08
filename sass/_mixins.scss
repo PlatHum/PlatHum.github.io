@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin for-phone-only {
     @media (max-width: 599px) { @content; }
   }
@@ -44,9 +46,8 @@
       cursor: pointer;
       outline: inherit;
     }
-  
   @mixin blurry-background {
-    background: hsl(0, 0%, 0% / 0.5);
+    background: hsl(0, 0%, math.div(0%, 0.5));
 
     @supports (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)) {
       background: hsla(0, 0%, 100%, 0.1);

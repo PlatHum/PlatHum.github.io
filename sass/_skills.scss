@@ -20,9 +20,6 @@
 .skill-cloud{
   width: 100%;
   height: 500px;
-  @include for-tablet-landscape-down{
-    height: 400px;
-  }
   grid-area: cloud;
   margin: 0;
   padding: 0;
@@ -30,6 +27,9 @@
   justify-items: center;
   align-items: center;
   position: relative;
+  @include for-tablet-landscape-down{
+    height: 400px;
+  }
 }
 
 .skill-canvas {
