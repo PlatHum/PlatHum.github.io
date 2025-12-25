@@ -84,6 +84,8 @@
 .skill-cloud ul li a.robotic-software{ --color: #4FDA55;}
 .skill-cloud ul li a.modeling-software { --color: #c38;}
 .skill-cloud ul li a.robotic-simulator{ --color: #8B5DF5;}
+.skill-cloud ul li a.software-libraries{ --color: #FF760D;}
+
 
 .skill-vloud ul a:focus {
   outline: 1px dashed;
@@ -141,7 +143,7 @@
   cursor: -webkit-grab;
 }
 
-/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+/* Apply a "closed-hand" cursor during drag operation. */
 .grabbable:active {
   cursor: grabbing;
   cursor: -moz-grabbing;
