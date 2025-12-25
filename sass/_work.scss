@@ -4,7 +4,7 @@
   height: 100%;
   grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
   grid-auto-rows: minmax(100px, auto);
-  grid-template-areas: "ist ist ist ist ist . fst fst fst fst fst"". . . trac trac trac trac trac . . .";
+  grid-template-areas: "ist ist ist ist ist . fst fst fst fst fst""trac trac trac trac trac . spacea spacea spacea spacea spacea";
 }
 
 .work-blob.work-ist {
@@ -136,6 +136,49 @@
   }
 }
 
+.work-blob.work-spaceapps {
+  grid-area: spacea;
+}
+
+.work-blob.work-spaceapps svg path {
+  animation-name: blob-animation-spaceapps;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  animation-play-state: paused;
+  filter: none;
+}
+
+.work-blob.work-spaceapps svg .work-svg-group-spaceapps:hover path,
+.work-blob.work-spaceapps svg .work-svg-group-spaceapps:focus path,
+.work-blob.work-spaceapps svg path.animate {
+  animation-play-state: running;
+  filter: url(#glow-effect-spaceapps);
+  /* Apply the filter on hover */
+}
+
+@keyframes blob-animation-spaceapps {
+  0% {
+    d: path("M472.5,306.5Q446,363,403,401.5Q360,440,305,422.5Q250,405,197,419.5Q144,434,97,399.5Q50,365,30.5,307.5Q11,250,37,196Q63,142,99,96.5Q135,51,192.5,36Q250,21,307,36.5Q364,52,393.5,101Q423,150,461,200Q499,250,472.5,306.5Z");
+  }
+
+  35% {
+    d: path("M418.5,296.5Q410,343,378,380Q346,417,298,410Q250,403,190,430.5Q130,458,94,409.5Q58,361,30,305.5Q2,250,29,194Q56,138,100,102.5Q144,67,197,56Q250,45,291.5,76Q333,107,387.5,123Q442,139,434.5,194.5Q427,250,418.5,296.5Z");
+  }
+
+  50% {
+    d: path(d="M426.5,295.5Q408,341,371.5,369Q335,397,292.5,410Q250,423,188,443.5Q126,464,82,418Q38,372,32.5,311Q27,250,46.5,197Q66,144,101.5,99.5Q137,55,193.5,34Q250,13,295,53.5Q340,94,382,122Q424,150,434.5,200Q445,250,426.5,295.5Z");
+  }
+
+  75% {
+    d: path("M422.5,306Q444,362,400.5,398Q357,434,303.5,446Q250,458,200,440.5Q150,423,124.5,380Q99,337,83.5,293.5Q68,250,52,188Q36,126,87.5,92Q139,58,194.5,55Q250,52,301,62.5Q352,73,405,101.5Q458,130,429.5,190Q401,250,422.5,306Z");
+  }
+
+  100% {
+    d: path("M472.5,306.5Q446,363,403,401.5Q360,440,305,422.5Q250,405,197,419.5Q144,434,97,399.5Q50,365,30.5,307.5Q11,250,37,196Q63,142,99,96.5Q135,51,192.5,36Q250,21,307,36.5Q364,52,393.5,101Q423,150,461,200Q499,250,472.5,306.5Z");
+  }
+}
+
 .work-blob svg text.job-title {
   font-size: var(--step-1);
   font-weight: 700;
@@ -176,7 +219,7 @@
 @include for-tablet-portrait-down {
   .work-div {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) min-content;
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) min-content;
     /*     grid-template-areas: 
     "ist"
     "fst"; */
@@ -197,8 +240,13 @@
     grid-column: 1 / 2;
   }
 
-  .work-div .down-svg {
+  .work-blob.work-spaceapps {
     grid-row: 4 / 5;
+    grid-column: 1 / 2;
+  }
+
+  .work-div .down-svg {
+    grid-row: 5 / 6;
     grid-column: 1 / 2;
     justify-self: center;
     align-self: baseline;
@@ -227,10 +275,10 @@
   }
 
   .work-blob svg text.job-company {
-    font-size: var(--step-3);
+    font-size: var(--step-2);
   }
 
   .work-blob svg text.job-duration {
-    font-size: var(--step-2);
+    font-size: var(--step-1-5);
   }
 }
