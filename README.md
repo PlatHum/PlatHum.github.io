@@ -1,3 +1,6 @@
+> [!NOTE]  
+> Website is deployed here: [https://plathum.github.io/](https://plathum.github.io/)
+
 # Resume Website
 
 It's about time I start applying to jobs and I thought that a website version of my resume would be a good project to include ...*in my resume*...
@@ -19,15 +22,15 @@ I developed the website using Jekyll because I thought it was the most straightf
 - The **blob shape** idea was also inspired by an [Online Tutorials](https://youtube.com/@OnlineTutorialsYT?si=47BTE4fDndVZR_M-)'s [Youtube video](https://www.youtube.com/watch?v=liW6bDLnuuk). It was just an inspiration however, as I decided to go deep into SVG programming to accomplish the SVG shape animation on hover and the gradient and glow effects. The SVG blob paths were randomly generated using [blobs.app](https://github.com/lokesh-coder/blobs.app).
 - The **retro contact form** idea came to me when I stumbled on [this CodePen](https://codepen.io/AlexKP/pen/xJjYwZ) by [AlexKP](https://codepen.io/AlexKP).
 
-I think these are all the *inspos*. Of course, thank you **StackOverflow**, I stole shamelessly from you.
+I think these are all the *inspos*. Of course, thank you **StackOverflow**, I stole shamelessly from you. And thank you Google Gemini, my unpaid Javascript and ThreeJS tutor. 
 
-The rest of the website's vibe and functionality came purely from my head. I am particularly proud of the Skills section. The word-cloud that can be randomized through a button and the spinnable 3D cube that can be textured with any skill you click on was pretty fun to make. It most certainly is the least efficient thing I ever programmed. But it looks and feels cool.
+The rest of the website's vibe and functionality came purely from my head. I am particularly proud of the interactive robotic arm that follows the user cursor around. Implementing the workspace limits, the floating and the pinching was hard iterative work. A lot of kinematic calculations in there... Learning about shaders for the thruster flame effect was also pretty cool, despite all the trial and error and headaches. The skill cube and the randomized word cloud also provided some interesting challenges that I feel like I solved in a cool-looking way.
 
 ## Future Feature Ideas
 - Custom Error 404 page;
 - Loading page for better mobile performance;
 - A pop-up button on the side that asks you if you want to download my resume;
-- I intend to model and rig a robotic arm in Blender. Then add it to the landing section of the website, behind the text. I'll use inverse kinematics and the ThreeJS library to make it look like it is trying to follow and grab the user's cursor. Let's hope I have the time...
+- [DONE] I intend to model and rig a robotic arm in Blender. Then add it to the landing section of the website, behind the text. I'll use inverse kinematics and the ThreeJS library to make it look like it is trying to follow and grab the user's cursor. Let's hope I have the time...
 
 ## Problems with the website
 Feel free to open an issue.
