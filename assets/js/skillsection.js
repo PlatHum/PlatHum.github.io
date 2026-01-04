@@ -1,3 +1,27 @@
+// Random word cloud & 3D Cube
+// Given a list of words, shuffle them in a random word cloud.
+// Give the user the option to re-shuffle.
+// Paint an orbiting 3D cube with a custom image depending on the clicked word.
+//
+// Copyright (C) 2026  Francisco Gonçalves <PlatHum on GitHub>
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
+// Contact PlatHum at: plathum.cubicle427@slmail.me
+// Original source code available at: https://github.com/PlatHum/PlatHum.github.io
+//
+
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/OrbitControls";
 

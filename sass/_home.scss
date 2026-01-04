@@ -5,13 +5,13 @@
   display: grid;
   grid-template-columns: 0.75fr 1fr 1fr minmax(60px, 400px);
   grid-template-rows: 2.5fr minmax(60px, 400px);
+  position: relative;
+  overflow: hidden;
 
   font-size: var(--step-3);
-
 }
 
 .home-socials {
-
   margin-left: 15%;
   margin-right: 15%;
   margin-bottom: 10%;
@@ -23,24 +23,24 @@
   justify-content: space-around;
   align-self: center;
   font-size: var(--step-2);
+  z-index: 2; /* Ensure text is above the robot */
 }
-
 
 /*TO REMOVE*/
 .home-robot {
-  height: 0;
-  width: 70%;
-  padding-bottom: 70%;
-  background-color: rgba(0, 85, 255, 0);
-  z-index: -1;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  align-self: center;
-  justify-self: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  left: 0;
+  z-index: 0; /* Behind everything */
+  pointer-events: auto; /* Let the mouse "pass through" to links */
+  background: transparent;
+  overflow: visible;
 }
-
 /*  */
 
 .home-text {
@@ -54,13 +54,19 @@
   display: grid;
   grid-template-rows: 4fr 2fr 2fr;
   height: 100%;
+  position: relative;
+  z-index: 2; /* Ensure text is above the robot */
+  pointer-events: none;
+  a, span, p {
+    pointer-events: auto;
+  }
 }
 
 .home-text-greeting {
   font-size: var(--step-6);
   font-weight: 800;
   line-height: 1.1;
-  align-self: last baseline
+  align-self: last baseline;
 }
 
 .home-text-motto {
@@ -77,17 +83,15 @@
   text-align: center;
   letter-spacing: -0.02em;
   padding-inline: 15%;
-  @include for-tablet-landscape-down{
+  @include for-tablet-landscape-down {
     text-justify: auto;
     padding-left: 7%;
     padding-right: 5%;
   }
-  @supports (text-justify:inter-word) {
-    text-justify: inter-word
+  @supports (text-justify: inter-word) {
+    text-justify: inter-word;
   }
 }
-
-
 
 /*SOCIAL SVGs*/
 .github-svg {
@@ -97,7 +101,6 @@
   background-repeat: no-repeat;
   background-origin: border-box;
   padding: 1.3rem;
-
 }
 
 .linkedin-svg {
@@ -115,6 +118,26 @@
   grid-column: 1 / 5;
   justify-self: center;
   align-self: last baseline;
+}
+
+#robot-canvas {
+  // Default values (Desktop)
+  --robot-anchor-x: 0.15;
+  --robot-anchor-y: 0.25;
+  --robot-default-joints: 0.6, 1.2, -0.4;
+
+  @include for-tablet-portrait-down{
+  --robot-anchor-x: 0.0.2;
+  --robot-anchor-y: 0.30;
+  --robot-default-joints: 0.05, 1.3, -0.4;
+  }
+
+  // Use your custom mixins
+  @include for-phone-only {
+    --robot-anchor-x: 0.6; // Center the base on small screens
+    --robot-anchor-y: 0.4; // Move it lower
+    --robot-default-joints: 1.5, 2.0, -1.0; 
+  }
 }
 
 /*END HOME SECTION STYLES*/
