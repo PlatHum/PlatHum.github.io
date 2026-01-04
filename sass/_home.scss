@@ -112,6 +112,17 @@
   padding: 1.5rem;
 }
 
+@include for-phone-only {
+  .home-socials {
+    grid-column: 1 / 5; 
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: var(--step-1-5);
+    justify-content: center;
+    gap: 1.5rem; 
+  }
+}
+
 /* DOWN SVG */
 .home-div .down-svg {
   grid-row: 2 / 3;
