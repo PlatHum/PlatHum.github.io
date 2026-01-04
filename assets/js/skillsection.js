@@ -29,6 +29,8 @@ class skillElement {
 
     this.setControls();
 
+    this.resize();
+
     //this.animate();
   }
 

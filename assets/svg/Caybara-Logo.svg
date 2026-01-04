@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" 
+     viewBox="60 210 430 430" preserveAspectRatio="xMidYMid meet">
   <defs>
     <style>
-      .cls-1 {
-        fill: none;
-      }
-
+      /* DEFAULT (Light Mode / Safari Pinned Tabs) */
+      .cls-1 { fill: none; }
       .cls-1, .cls-2, .cls-3 {
         stroke: #231f20;
         stroke-miterlimit: 10;
       }
-
-      .cls-2 {
-        fill: #231f20;
-      }
-
+      .cls-2 { fill: #231f20; }
       .cls-3 {
         fill: #a7a9ac;
         stroke-width: 1.23px;
+      }
+
+      /* DARK MODE */
+      @media (prefers-color-scheme: dark) {
+        .cls-1, .cls-2, .cls-3 { stroke: #ffffff; }
+        .cls-2 { fill: #ffffff; }
       }
     </style>
   </defs>
